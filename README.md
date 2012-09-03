@@ -20,11 +20,11 @@ of the platform.
 
 ### The HTML Plugins
 
-# Notes on the Documentation
+## Notes on the Documentation
 
-# Help Us Make It Better
+## Help Us Make It Better
 
-# License
+## License
 
 Copyright (c) 2012, Global Dawn.
 

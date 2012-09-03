@@ -8,13 +8,10 @@ of the platform.
 
 ## Documentation Table of Contents
 
-### [The Backend APIs](https://github.com/esp/docs/blob/master/apis/README.md)
-
-#### [Social Registration and Sharing](https://github.com/esp/docs/blob/master/apis/README.md#)
-
-### [The JavaScript SDK](https://github.com/esp/docs/blob/master/sdk/README.md)
-
-### [The HTML Plugins](https://github.com/esp/docs/blob/master/plugins/README.md)
+* [The Backend APIs](https://github.com/esp/docs/blob/master/apis/README.md)
+  * [Social Registration and Sharing](https://github.com/esp/docs/blob/master/apis/README.md#)
+* [The JavaScript SDK](https://github.com/esp/docs/blob/master/sdk/README.md)
+* [The HTML Plugins](https://github.com/esp/docs/blob/master/plugins/README.md)
 
 ## Overview
 

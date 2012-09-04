@@ -46,12 +46,11 @@ For brevity, these common events are not listed again under each plugin below.
 
 ## The Plugins
 
-### Social Registration and Sharing
-
-#### Facebook Login
+### Facebook Login
 
 > _ID:_ `fb-login`
 > _Groups:_ `login`
+> _Pack: Social Registration and Sharing
 
 A button that allows the user to login with Facebook. If the user is already logged in, the plugin will be empty until they log out.
 
@@ -85,10 +84,11 @@ A button that allows the user to login with Facebook. If the user is already log
 | `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
 | `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
 
-#### Twitter Login
+### Twitter Login
 
 > _ID:_ `tw-login`
 > _Groups:_ `login`
+> _Pack: Social Registration and Sharing
 
 A button that allows the user to login with Twitter. If the user is already logged in, the plugin will be empty until they log out.
 
@@ -122,10 +122,11 @@ A button that allows the user to login with Twitter. If the user is already logg
 | `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
 | `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
 
-#### User Status
+### User Status
 
 > _ID:_ `user-status`
 > _Groups:_ `login`
+> _Pack: Social Registration and Sharing
 
 If the user is logged in, this plugin will show their avatar, and links to logout or edit their profile. If the user is logged out, this plugin will be empty until they log in.
 
@@ -159,12 +160,13 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 | `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
 | `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
 
-#### All Login
+### All Login
 
-> :information_source: &nbsp;This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
+> :link: &nbsp;This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
 > _ID:_ `all-login`
 > _Group members:_ `fb-login`, `tw-login`, `user-status`
+> _Pack: Social Registration and Sharing
 
 This plugin renders the Facebook Login, Twitter Login, and User Status plugins using a single piece of declarative markup. Any options you set on this plugin are effectively passed through to the other plugins it starts up.
 
@@ -174,37 +176,37 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="all-login"></div>
 ```
 
-#### Facebook Bookmark
+### Facebook Bookmark
 
 ```html
 <div data-gd-plugin="fb-bookmark"></div>
 ```
 
-#### Twitter Bookmark
+### Twitter Bookmark
 
 ```html
 <div data-gd-plugin="tw-bookmark"></div>
 ```
 
-#### All Bookmark
+### All Bookmark
 
 ```html
 <div data-gd-plugin="all-bookmark"></div>
 ```
 
-#### Facebook Share
+### Facebook Share
 
 ```html
 <div data-gd-plugin="fb-share"></div>
 ```
 
-#### Twitter Share
+### Twitter Share
 
 ```html
 <div data-gd-plugin="tw-share"></div>
 ```
 
-#### All Share
+### All Share
 
 ```html
 <div data-gd-plugin="all-share"></div>

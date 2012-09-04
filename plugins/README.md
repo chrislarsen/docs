@@ -84,6 +84,8 @@ A button that allows the user to login with Facebook. If the user is already log
 | `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
 | `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
 
+---
+
 ### Twitter Login
 
 > **ID:** `tw-login`
@@ -121,6 +123,8 @@ A button that allows the user to login with Twitter. If the user is already logg
 | `/gd/user/logout` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
 | `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
 | `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
+
+---
 
 ### User Status
 
@@ -160,6 +164,8 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 | `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
 | `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
 
+---
+
 ### All Login
 
 > :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
@@ -176,11 +182,15 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="all-login"></div>
 ```
 
+---
+
 ### Facebook Bookmark
 
 ```html
 <div data-gd-plugin="fb-bookmark"></div>
 ```
+
+---
 
 ### Twitter Bookmark
 
@@ -188,11 +198,15 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="tw-bookmark"></div>
 ```
 
+---
+
 ### All Bookmark
 
 ```html
 <div data-gd-plugin="all-bookmark"></div>
 ```
+
+---
 
 ### Facebook Share
 
@@ -200,11 +214,15 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="fb-share"></div>
 ```
 
+---
+
 ### Twitter Share
 
 ```html
 <div data-gd-plugin="tw-share"></div>
 ```
+
+---
 
 ### All Share
 

@@ -24,6 +24,12 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 <div data-gd-plugin="fb-login"></div>
 ```
 
+Options:
+
+* `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
+* `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
+* `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
+
 ##### Twitter Login
 
 ```html

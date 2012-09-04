@@ -49,13 +49,15 @@ The `gd.init` function takes one argument, a key/value `Object` of options to ch
 * `proxyPath`, `String`, default `"/gd/proxy"`: The path to the proxy through which the communication to the APIs will happen. This **must** be on the same domain and port as the page which is loading the SDK, or you'll get cross domain issues. Set the value of this option to the path at which your proxy (as configured previously in this guide) is listening.
 * `loadStylesheets`, `Boolean`, default `true`: Set this to false to disable the loading of any stylesheets for the plugins. This allows you to completely control the look and feel of any widgets.
 
-The return value of `gd.init` is a "promise", which means you can add a callback for when this promised data is finished fetching by calling the `then` function as in the above example.
+The return value of `gd.init` is a "promise", which means you can add a callback for when this promised data is finished fetching by calling the `then` function as in the above example. Note that this is completely optional &mdash; if you don't need to listen or create any events, then you can just drop the `then` call.
 
 Onwards into this documentation, any code we give examples for should be assumed to be in this  callback unless otherwise explicitly mentioned.
 
 For your reference, here are the previous examples combined into a single script:
 
 ```js
+<script src="http://static-nocdn.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
+<script>
 window.gdLoaded = function() {
   gd.init({
     foo: "bar"
@@ -63,6 +65,7 @@ window.gdLoaded = function() {
     // Code for handling SDK events goes in here.
   });
 }
+</script>
 ```
 
 ## Declarative Markup

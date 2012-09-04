@@ -190,6 +190,15 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="fb-bookmark"></div>
 ```
 
+**Options:**
+
+| name | default | description |
+|------|---------|-------------|
+
+**Broadcasted Events:** None
+
+**Subscribed Events:** None
+
 ---
 
 ### Twitter Bookmark
@@ -198,13 +207,33 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="tw-bookmark"></div>
 ```
 
+**Options:**
+
+| name | default | description |
+|------|---------|-------------|
+
+**Broadcasted Events:** None
+
+**Subscribed Events:** None
+
 ---
 
 ### All Bookmark
 
+> :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
+
+> **ID:** `all-login`
+> **Group members:** `fb-bookmark`, `tw-bookmark`
+> **Pack:** Social Registration and Sharing
+
 ```html
 <div data-gd-plugin="all-bookmark"></div>
 ```
+
+**Options:**
+
+| name | default | description |
+|------|---------|-------------|
 
 ---
 
@@ -214,6 +243,15 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="fb-share"></div>
 ```
 
+**Options:**
+
+| name | default | description |
+|------|---------|-------------|
+
+**Broadcasted Events:** None
+
+**Subscribed Events:** None
+
 ---
 
 ### Twitter Share
@@ -222,10 +260,30 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="tw-share"></div>
 ```
 
+**Options:**
+
+| name | default | description |
+|------|---------|-------------|
+
+**Broadcasted Events:** None
+
+**Subscribed Events:** None
+
 ---
 
 ### All Share
 
+> :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
+
+> **ID:** `all-login`
+> **Group members:** `fb-share`, `tw-share`
+> **Pack:** Social Registration and Sharing
+
 ```html
 <div data-gd-plugin="all-share"></div>
 ```
+
+**Options:**
+
+| name | default | description |
+|------|---------|-------------|

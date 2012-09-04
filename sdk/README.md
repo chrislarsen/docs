@@ -88,7 +88,7 @@ The SDK is used to start any plugins found in the DOM of the document it is load
 
 You can read all about this in depth in [the documentation on the plugins](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
 
-## Event Subcribing and Broadcasting
+## Event Subscribing and Broadcasting
 
 If you want to trigger actions when the user interacts with a plugin, or want to trigger plugins to change their state, you need to subscribe to, or broadcast, events.
 

@@ -14,7 +14,19 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 
 An example of a simple plugin is as follows:
 
+```html
+<div data-gd-plugin="fb-login"></div>
+```
 
+This would start up the `fb-login` plugin. This particular plugin can also take some options, so here's an example with one of them provided:
+
+```html
+<div data-gd-plugin="fb-login" data-gd-popup="false" data-gd-success-redirect="http://foo.com/bar" data-gd-failure-redirect="http://foo.com/moo"></div>
+```
+
+Note that every single declarative attribute we add is prefixed with `data-gd` &mdash; the `data-` part is mandated by the HTML5 specification, and the `gd-` part is our namespace to ensure we don't clash with any other data attributes from other providers.
+
+You can add any other attributes to the plugin node as you wish &mdash; ID and class attributes are fine, along with other data attributes that aren't used by plugin you are attaching them to. This means you should still have full control over the markup.
 
 ## The Plugins
 

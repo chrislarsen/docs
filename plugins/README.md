@@ -28,13 +28,30 @@ Note that every single declarative attribute we add is prefixed with `data-gd` &
 
 You can add any other attributes to the plugin node as you wish &mdash; ID and class attributes are fine, along with other data attributes that aren't used by plugin you are attaching them to. This means you should still have full control over the markup.
 
+### Groups and Group Members
+
+Some plugins are "groups" &mdash; this means that when they are encountered in the DOM, they are replaced with several plugins, one for each member of that group.
+
+In the documentation below, you'll see at the beginning of each plugin's section some information on what groups a plugin belongs to, or if the plugin in question is a group, what plugins are inside that group.
+
+Note that when data attributes are set on a group, they are given to all of the plugins inside that group; because any unknown attributes are ignored by plugins, you can safely mix attributes for multiple plugins on the group node.
+
+### Common Events
+
+All plugins broadcast or listen to some common events that the SDK itself is in charge of. These are, in no particular order:
+
+* `/gd/plugin/loaded/<group>`: This event is fired once for each group that a plugin belongs to. A plugin internally listens to this iself to know when it's markup is ready so it can do any initialisation it needs to do. You can use this event to perform an action when a plugin is ready. Callbacks are passed one argument, which is a reference to the plugin that was loaded.
+
+For brevity, these common events are not listed again under each plugin below.
+
 ## The Plugins
 
 ### Social Registration and Sharing
 
 #### Facebook Login
 
-> _Plugin identifier:_ fb-login
+> _Plugin identifier:_ `fb-login`
+> _Plugin groups:_ `login`
 
 A button that allows the user to login with Facebook. If the user is already logged in, the plugin will be empty until they log out.
 
@@ -50,9 +67,21 @@ A button that allows the user to login with Facebook. If the user is already log
 * `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
 * `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
 
+**Broadcasted Events:**
+
+* `/gd/user/login/success`: Broadcasted when a user successfully signs in using this plugin.
+* `/gd/user/login/failure`: Broadcasted when a user fails to sign in using this plugin.
+
+**Subscribed Events:**
+
+* `/gd/user/logout`: Subscribes to this so it can show and hide the login buttons on change of the user's status.
+* `/gd/user/login/success`: Subscribes to this so it can show and hide the login buttons on change of the user's status.
+* `/gd/user/login/failure`: Subscribes to this so it can show and hide the login buttons on change of the user's status.
+
 #### Twitter Login
 
-> _Plugin identifier:_ tw-login
+> _Plugin identifier:_ `tw-login`
+> _Plugin groups:_ `login`
 
 A button that allows the user to login with Twitter. If the user is already logged in, the plugin will be empty until they log out.
 
@@ -70,7 +99,8 @@ A button that allows the user to login with Twitter. If the user is already logg
 
 #### User Status
 
-> _Plugin identifier:_ user-status
+> _Plugin identifier:_ `user-status`
+> _Plugin groups:_ `login`
 
 If the user is logged in, this plugin will show their avatar, and links to logout or edit their profile. If the user is logged out, this plugin will be empty until they log in.
 
@@ -88,7 +118,8 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 
 #### All Login
 
-> _Plugin identifier:_ all-login
+> _Plugin identifier:_ `all-login`
+> _Plugin group members:_ `fb-login`, `tw-login`, `user-status`
 
 This plugin renders the Facebook Login, Twitter Login, and User Status plugins using a single piece of declarative markup. Any options you set on this plugin are effectively passed through to the other plugins it starts up.
 

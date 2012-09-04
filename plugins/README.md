@@ -16,9 +16,7 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 
 ### Social Registration and Sharing
 
-#### Login
-
-##### Facebook Login
+#### Facebook Login
 
 > _Plugin identifier:_ fb-login
 
@@ -34,7 +32,7 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 * `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
 * `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
 
-##### Twitter Login
+#### Twitter Login
 
 > _Plugin identifier:_ tw-login
 
@@ -50,7 +48,7 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 * `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
 * `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
 
-##### User Status
+#### User Status
 
 > _Plugin identifier:_ user-status
 
@@ -66,7 +64,7 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 * `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
 * `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
 
-##### All
+#### All Login
 
 > _Plugin identifier:_ all-login
 
@@ -82,41 +80,37 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 * `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
 * `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
 
-#### Bookmark
-
-##### Facebook
+#### Facebook Bookmark
 
 ```html
 <div data-gd-plugin="fb-bookmark"></div>
 ```
 
-##### Twitter
+#### Twitter Bookmark
 
 ```html
 <div data-gd-plugin="tw-bookmark"></div>
 ```
 
-##### All
+#### All Bookmark
 
 ```html
 <div data-gd-plugin="all-bookmark"></div>
 ```
 
-#### Share
-
-##### Facebook
+#### Facebook Share
 
 ```html
 <div data-gd-plugin="fb-share"></div>
 ```
 
-##### Twitter
+#### Twitter Share
 
 ```html
 <div data-gd-plugin="tw-share"></div>
 ```
 
-##### All
+#### All Share
 
 ```html
 <div data-gd-plugin="all-share"></div>

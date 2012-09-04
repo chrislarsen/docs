@@ -31,7 +31,7 @@ As long as these rules are followed, you can implement the proxy any way you cho
 You can load the SDK by simply adding the following script tag in the `<head>` of your documentes:
 
 ```html
-<script src="http://static-nocdn.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
+<script src="http://static-files.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
 ```
 
 This is a very small JavaScript file that should not be cached. It loads the actual SDK from our CDN, making sure the delivery to the client is as fast as possible but ensuring updates are timely.
@@ -70,7 +70,7 @@ Onwards into this documentation, any code we give examples for should be assumed
 For your reference, here are the previous examples combined into a single script:
 
 ```html
-<script src="http://static-nocdn.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
+<script src="http://static-files.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
 <script>
 window.gdLoaded = function() {
   gd.init({

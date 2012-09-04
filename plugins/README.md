@@ -100,9 +100,27 @@ A button that allows the user to login with Twitter. If the user is already logg
 
 **Options:**
 
-* `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
-* `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
-* `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
+| name | default | description |
+|------|---------|-------------|
+|`data-gd-popup` | `"true"` | Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties. |
+| `data-gd-success-redirect` | none | A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`. |
+| `data-gd-failure-redirect` | none | A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`. |
+
+**Broadcasted Events:**
+
+
+| name | description | arguments |
+|------|-------------|-----------|
+| `/gd/user/login/success` | Broadcasted when a user successfully signs in using this plugin.| none |
+| `/gd/user/login/failure` | Broadcasted when a user fails to sign in using this plugin. | none |
+
+**Subscribed Events:**
+
+| name | description | arguments |
+|------|-------------|-----------|
+| `/gd/user/logout` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
+| `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
+| `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
 
 #### User Status
 
@@ -119,14 +137,34 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 
 **Options:**
 
-* `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
-* `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
-* `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
+| name | default | description |
+|------|---------|-------------|
+|`data-gd-popup` | `"true"` | Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties. |
+| `data-gd-success-redirect` | none | A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`. |
+| `data-gd-failure-redirect` | none | A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`. |
+
+**Broadcasted Events:**
+
+
+| name | description | arguments |
+|------|-------------|-----------|
+| `/gd/user/login/success` | Broadcasted when a user successfully signs in using this plugin.| none |
+| `/gd/user/login/failure` | Broadcasted when a user fails to sign in using this plugin. | none |
+
+**Subscribed Events:**
+
+| name | description | arguments |
+|------|-------------|-----------|
+| `/gd/user/logout` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
+| `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
+| `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
 
 #### All Login
 
 > _ID:_ `all-login`
 > _Group members:_ `fb-login`, `tw-login`, `user-status`
+
+> :information_source: &nbsp;This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
 This plugin renders the Facebook Login, Twitter Login, and User Status plugins using a single piece of declarative markup. Any options you set on this plugin are effectively passed through to the other plugins it starts up.
 
@@ -135,12 +173,6 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 ```html
 <div data-gd-plugin="all-login"></div>
 ```
-
-**Options:**
-
-* `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
-* `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
-* `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
 
 #### Facebook Bookmark
 

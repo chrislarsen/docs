@@ -4,7 +4,7 @@
 
 ### Setting Up The Proxy
 
-In order to communicate with the APIs without exposing the API key to prying eyes, the SDK requires a very basic reverse proxy to be set up through which it can call the back-end. To make this process as simple as possible, [we provide a set of example implementations](https://github.com/esp/api-example-proxy) in a wide variety of languages or configurations.
+In order to communicate with the APIs without exposing the API key to prying eyes, the SDK requires a very basic reverse proxy to be set up through which it can call the back-end. To make this process as simple as possible, [we provide a set of example implementations](https://github.com/globaldawn/api-example-proxy) in a wide variety of languages or configurations.
 
 We strongly recommend tha you use the Nginx, Apache, or other web server versions where possible &mdash; these are much faster than the alternatives by an order of magnitude.
 
@@ -31,7 +31,7 @@ As long as these rules are followed, you can implement the proxy any way you cho
 You can load the SDK by simply adding the following script tag in the `<head>` of your documentes:
 
 ```html
-<script src="http://static-files.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
+<script src="https://static-files.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
 ```
 
 This is a very small JavaScript file that should not be cached. It loads the actual SDK from our CDN, making sure the delivery to the client is as fast as possible but ensuring updates are timely.
@@ -70,7 +70,7 @@ Onwards into this documentation, any code we give examples for should be assumed
 For your reference, here are the previous examples combined into a single script:
 
 ```html
-<script src="http://static-files.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
+<script src="https://static-files.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
 <script>
 window.gdLoaded = function() {
   gd.init({
@@ -86,7 +86,7 @@ window.gdLoaded = function() {
 
 The SDK is used to start any plugins found in the DOM of the document it is loaded within. As such, it looks through the document for any declarative markup that represents plugins that need to be loaded, and loads them.
 
-You can read all about this in depth in [the documentation on the plugins](https://github.com/esp/docs/blob/master/plugins/README.md).
+You can read all about this in depth in [the documentation on the plugins](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
 
 ## Event Subcribing and Broadcasting
 
@@ -94,7 +94,7 @@ If you want to trigger actions when the user interacts with a plugin, or want to
 
 ### Subscribing
 
-All plugins broadcast at least some events &mdash; the exact events they broadcast are documented in [the documentation on the plugins](https://github.com/esp/docs/blob/master/plugins/README.md).
+All plugins broadcast at least some events &mdash; the exact events they broadcast are documented in [the documentation on the plugins](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
 
 Regardless of what event you are handling, the code pattern is the same:
 
@@ -137,7 +137,7 @@ gd.events('/some/event/name').broadcast().unsubscribe(callback);
 
 ### Broadcasting
 
-At this stage, most of the plugins listen to events that are really only useful internally to the SDK. That said, if a plugin does listen for an event, it will be listed in [the documentation on the plugins](https://github.com/esp/docs/blob/master/plugins/README.md).
+At this stage, most of the plugins listen to events that are really only useful internally to the SDK. That said, if a plugin does listen for an event, it will be listed in [the documentation on the plugins](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
 
 As with subscribing to events, you can broadcast events with a common code pattern:
 

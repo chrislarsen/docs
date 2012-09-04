@@ -55,7 +55,7 @@ Onwards into this documentation, any code we give examples for should be assumed
 
 For your reference, here are the previous examples combined into a single script:
 
-```js
+```html
 <script src="http://static-nocdn.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
 <script>
 window.gdLoaded = function() {

@@ -24,7 +24,7 @@ This would start up the `fb-login` plugin. This particular plugin can also take 
 <div data-gd-plugin="fb-login" data-gd-popup="false" data-gd-success-redirect="http://foo.com/bar" data-gd-failure-redirect="http://foo.com/moo"></div>
 ```
 
-Note that every single declarative attribute we add is prefixed with `data-gd` &mdash; the `data-` part is mandated by the HTML5 specification, and the `gd-` part is our namespace to ensure we don't clash with any other data attributes from other providers.
+Note that every single declarative attribute we add is prefixed with `data-gd` &mdash; the `data-` part is mandated by the HTML5 specification, and the `gd-` part is our namespace to ensure we don't clash with any other data attributes.
 
 You can add any other attributes to the plugin node as you wish &mdash; ID and class attributes are fine, along with other data attributes that aren't used by plugin you are attaching them to. This means you should still have full control over the markup.
 
@@ -50,8 +50,8 @@ For brevity, these common events are not listed again under each plugin below.
 
 #### Facebook Login
 
-> _Plugin identifier:_ `fb-login`
-> _Plugin groups:_ `login`
+> _ID:_ `fb-login`
+> _Groups:_ `login`
 
 A button that allows the user to login with Facebook. If the user is already logged in, the plugin will be empty until they log out.
 
@@ -87,8 +87,8 @@ A button that allows the user to login with Facebook. If the user is already log
 
 #### Twitter Login
 
-> _Plugin identifier:_ `tw-login`
-> _Plugin groups:_ `login`
+> _ID:_ `tw-login`
+> _Groups:_ `login`
 
 A button that allows the user to login with Twitter. If the user is already logged in, the plugin will be empty until they log out.
 
@@ -106,8 +106,8 @@ A button that allows the user to login with Twitter. If the user is already logg
 
 #### User Status
 
-> _Plugin identifier:_ `user-status`
-> _Plugin groups:_ `login`
+> _ID:_ `user-status`
+> _Groups:_ `login`
 
 If the user is logged in, this plugin will show their avatar, and links to logout or edit their profile. If the user is logged out, this plugin will be empty until they log in.
 
@@ -125,8 +125,8 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 
 #### All Login
 
-> _Plugin identifier:_ `all-login`
-> _Plugin group members:_ `fb-login`, `tw-login`, `user-status`
+> _ID:_ `all-login`
+> _Group members:_ `fb-login`, `tw-login`, `user-status`
 
 This plugin renders the Facebook Login, Twitter Login, and User Status plugins using a single piece of declarative markup. Any options you set on this plugin are effectively passed through to the other plugins it starts up.
 

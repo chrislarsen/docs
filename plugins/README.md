@@ -20,11 +20,15 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 
 ##### Facebook Login
 
+> _Plugin identifier:_ fb-login
+
+**Example:**
+
 ```html
 <div data-gd-plugin="fb-login"></div>
 ```
 
-Options:
+**Options:**
 
 * `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
 * `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
@@ -32,21 +36,51 @@ Options:
 
 ##### Twitter Login
 
+> _Plugin identifier:_ tw-login
+
+**Example:**
+
 ```html
 <div data-gd-plugin="tw-login"></div>
 ```
 
+**Options:**
+
+* `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
+* `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
+* `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
+
 ##### User Status
+
+> _Plugin identifier:_ user-status
+
+**Example:**
 
 ```html
 <div data-gd-plugin="user-status"></div>
 ```
 
+**Options:**
+
+* `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
+* `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
+* `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
+
 ##### All
+
+> _Plugin identifier:_ all-login
+
+**Example:**
 
 ```html
 <div data-gd-plugin="all-login"></div>
 ```
+
+**Options:**
+
+* `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
+* `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
+* `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
 
 #### Bookmark
 

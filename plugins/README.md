@@ -63,20 +63,27 @@ A button that allows the user to login with Facebook. If the user is already log
 
 **Options:**
 
-* `data-gd-popup`, default `"true"`: Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.
-* `data-gd-success-redirect`: A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.
-* `data-gd-failure-redirect`: A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.
+| name | default | description |
+|------|---------|-------------|
+|`data-gd-popup`|`"true"`|Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties.|
+|`data-gd-success-redirect`||A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`.|
+|`data-gd-failure-redirect`||A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`.|
 
 **Broadcasted Events:**
 
-* `/gd/user/login/success`: Broadcasted when a user successfully signs in using this plugin.
-* `/gd/user/login/failure`: Broadcasted when a user fails to sign in using this plugin.
+
+| name | description | arguments |
+|------|-------------|-----------|
+|`/gd/user/login/success`|Broadcasted when a user successfully signs in using this plugin.||
+|`/gd/user/login/failure`|Broadcasted when a user fails to sign in using this plugin.||
 
 **Subscribed Events:**
 
-* `/gd/user/logout`: Subscribes to this so it can show and hide the login buttons on change of the user's status.
-* `/gd/user/login/success`: Subscribes to this so it can show and hide the login buttons on change of the user's status.
-* `/gd/user/login/failure`: Subscribes to this so it can show and hide the login buttons on change of the user's status.
+| name | description | arguments |
+|------|-------------|-----------|
+|`/gd/user/logout`|Subscribes to this so it can show and hide the login buttons on change of the user's status.||
+|`/gd/user/login/success`|Subscribes to this so it can show and hide the login buttons on change of the user's status||
+|`/gd/user/login/failure`||Subscribes to this so it can show and hide the login buttons on change of the user's status.||
 
 #### Twitter Login
 

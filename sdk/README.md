@@ -4,13 +4,26 @@
 
 ### Setting Up The Proxy
 
-In order to communicate with the APIs without exposing the API to prying eyes, the SDK requires a very basic reverse proxy to be set up through which it can call the back-end. To make this process as simple as possible, [we provide a set of example implementations](https://github.com/esp/api-example-proxy) in a wide variety of languages or configurations.
+In order to communicate with the APIs without exposing the API key to prying eyes, the SDK requires a very basic reverse proxy to be set up through which it can call the back-end. To make this process as simple as possible, [we provide a set of example implementations](https://github.com/esp/api-example-proxy) in a wide variety of languages or configurations.
 
 We strongly recommend tha you use the Nginx, Apache, or other web server versions where possible &mdash; these are much faster than the alternatives by an order of magnitude.
 
+#### Configuring The Proxy
+
+TODO
+
 #### Writing Your Own Proxy Implementation
 
-#### Configuring The Proxy
+You are by no means limited to using the example implementations of the proxy that we have provided. The proxy itself has a very small list of requirements for it to work, which can be implemented easily:
+
+* It must listen on the same origin (ie. same domain and port) as the document that loads the SDK.
+* It should proxy all requsts to `https://apis.globaldawn.co/`.
+* If it is listening at `/gd/proxy`, and `/gd/proxy/apis/test` is called, the `/gd/proxy` prefix should be stripped off &mdash; this means in this example, the request would be proxied to `https://apis.globaldawn.co/apis/test`.
+* It must preserve all appropriate headers.
+* It must preserve any query string.
+* It must add one header, the `X-GD-API-Key` header &mdash; the value should be the API key for your account.
+
+As long as these rules are followed, you can implement the proxy any way you choose, and in any language/framework/tool of your choice.
 
 ## Loading The SDK
 

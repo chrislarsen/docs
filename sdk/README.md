@@ -22,6 +22,7 @@ You are by no means limited to using the example implementations of the proxy th
 * It must preserve all appropriate headers.
 * It must preserve any query string.
 * It must add one header, the `X-GD-API-Key` header &mdash; the value should be the API key for your account.
+* It should send back the response to the requestee exactly as received from our APIs &mdash; that means headers should also be preserved.
 
 As long as these rules are followed, you can implement the proxy any way you choose, and in any language/framework/tool of your choice.
 

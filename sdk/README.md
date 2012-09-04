@@ -42,6 +42,8 @@ gd.init({
 });
 ```
 
+We recommend you define this function in a `<script>` tag (an external script is fine) **directly after the `<script>` tag that loads the SDK**.
+
 The `gd.init` function takes one argument, a key/value `Object` of options to change various SDK settings. The full list of settings is as follows:
 
 * `proxyPath`, `String`, default `"/gd/proxy"`: The path to the proxy through which the communication to the APIs will happen. This **must** be on the same domain and port as the page which is loading the SDK, or you'll get cross domain issues. Set the value of this option to the path at which your proxy (as configured previously in this guide) is listening.
@@ -50,6 +52,18 @@ The `gd.init` function takes one argument, a key/value `Object` of options to ch
 The return value of `gd.init` is a "promise", which means you can add a callback for when this promised data is finished fetching by calling the `then` function as in the above example.
 
 Onwards into this documentation, any code we give examples for should be assumed to be in this  callback unless otherwise explicitly mentioned.
+
+For your reference, here are the previous examples combined into a single script:
+
+```js
+window.gdLoaded = function() {
+  gd.init({
+    foo: "bar"
+  }).then(function() {
+    // Code for handling SDK events goes in here.
+  });
+}
+```
 
 ## Declarative Markup
 

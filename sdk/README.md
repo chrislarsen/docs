@@ -118,7 +118,7 @@ gd.event('/some/event/name').unsubscribe(callback1, callback2, ...);
 Note that `subscribe` and `unsubscribe` both return an object suitable for chaining with `broadcast`:
 
 ```js
-gd.events('/some/event/name`).broadcast().unsubscribe(callback);
+gd.events('/some/event/name').broadcast().unsubscribe(callback);
 ```
 
 ### Broadcasting
@@ -128,7 +128,7 @@ At this stage, most of the plugins listen to events that are really only useful 
 As with subscribing to events, you can broadcast events with a common code pattern:
 
 ```js
-gd.events('/some/event/name`).broadcast(arg1, arg2, ...);
+gd.events('/some/event/name').broadcast(arg1, arg2, ...);
 ```
 
 You don't have to provide the `broadcast` method with any arguments if you don't want, but if you do they will be used as the arguments when calling any callbacks for the event you fire.

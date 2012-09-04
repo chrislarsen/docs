@@ -49,7 +49,9 @@ For brevity, these common events are not listed again under each plugin below.
 ### Facebook Login
 
 > _ID:_ `fb-login`
+
 > _Groups:_ `login`
+
 > _Pack: Social Registration and Sharing
 
 A button that allows the user to login with Facebook. If the user is already logged in, the plugin will be empty until they log out.
@@ -87,7 +89,9 @@ A button that allows the user to login with Facebook. If the user is already log
 ### Twitter Login
 
 > _ID:_ `tw-login`
+
 > _Groups:_ `login`
+
 > _Pack: Social Registration and Sharing
 
 A button that allows the user to login with Twitter. If the user is already logged in, the plugin will be empty until they log out.
@@ -125,7 +129,9 @@ A button that allows the user to login with Twitter. If the user is already logg
 ### User Status
 
 > _ID:_ `user-status`
+
 > _Groups:_ `login`
+
 > _Pack: Social Registration and Sharing
 
 If the user is logged in, this plugin will show their avatar, and links to logout or edit their profile. If the user is logged out, this plugin will be empty until they log in.
@@ -165,7 +171,9 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 > :link: &nbsp;This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
 > _ID:_ `all-login`
+
 > _Group members:_ `fb-login`, `tw-login`, `user-status`
+
 > _Pack: Social Registration and Sharing
 
 This plugin renders the Facebook Login, Twitter Login, and User Status plugins using a single piece of declarative markup. Any options you set on this plugin are effectively passed through to the other plugins it starts up.

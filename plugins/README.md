@@ -161,10 +161,10 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 
 #### All Login
 
+> :information_source: &nbsp;This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
+
 > _ID:_ `all-login`
 > _Group members:_ `fb-login`, `tw-login`, `user-status`
-
-> :information_source: &nbsp;This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
 This plugin renders the Facebook Login, Twitter Login, and User Status plugins using a single piece of declarative markup. Any options you set on this plugin are effectively passed through to the other plugins it starts up.
 

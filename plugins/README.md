@@ -202,9 +202,9 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 |------|---------|-------------|
 | `data-gd-fb-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
 | `data-gd-fb-width` | `"450"` | The width of the button. |
-| `data-gd-fb-show-faces` | `"true"` | Whether to show avatars of friends below the share button for a logged in useri (this only shows when `data-gd-fb-layout` is set to `standard`). |
+| `data-gd-fb-show-faces` | `"true"` | Whether to show avatars of friends below the share button for a logged in useri (this only shows when `data-gd-fb-layout` is set to `"standard"`). |
 | `data-gd-fb-layout`| `"standard"` | The layout of the like button. Possible values are `"standard"` (displays test to the right of the button, and faces below), `"button_count"` (displays total number of likes to the right of the button), and `"box_count"` (displays total number of likes in a callout above the button). |
-| `data-gd-fb-action | `"like"` | The verb to display on the button. valid options are `"like"` and `"recommend"`.
+| `data-gd-fb-action` | `"like"` | The verb to display on the button. valid options are `"like"` and `"recommend"`.
 | `data-gd-fb-colorscheme` | `"light"` | The colour scheme for the button. Valid options are `"light"` and `"dark"`.
 | `data-gd-fb-font` | none | Sets the font for the button. Valid options are `"arial"`, `"lucida grande"`, `"segoe ui"`, `"tahoma"`, `"trebuchet ms"` and `"verdana"` |
 
@@ -259,11 +259,6 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 ```html
 <div data-gd-plugin="all-bookmark"></div>
 ```
-
-**Options:**
-
-| name | default | description |
-|------|---------|-------------|
 
 ---
 
@@ -326,8 +321,3 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 ```html
 <div data-gd-plugin="all-share"></div>
 ```
-
-**Options:**
-
-| name | default | description |
-|------|---------|-------------|

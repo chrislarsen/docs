@@ -186,6 +186,12 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ### Facebook Bookmark
 
+> **ID:** `fb-bookmark`
+> **Groups:** `bookmark`
+> **Pack:** Social Registration and Sharing
+
+**Example:**
+
 ```html
 <div data-gd-plugin="fb-bookmark"></div>
 ```
@@ -194,6 +200,13 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 | name | default | description |
 |------|---------|-------------|
+| `data-gd-fb-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
+| `data-gd-fb-width` | `"450"` | The width of the button. |
+| `data-gd-fb-show-faces` | `"true"` | Whether to show avatars of friends below the share button for a logged in useri (this only shows when `data-gd-fb-layout` is set to `standard`). |
+| `data-gd-fb-layout`| `"standard"` | The layout of the like button. Possible values are `"standard"` (displays test to the right of the button, and faces below), `"button_count"` (displays total number of likes to the right of the button), and `"box_count"` (displays total number of likes in a callout above the button). |
+| `data-gd-fb-action | `"like"` | The verb to display on the button. valid options are `"like"` and `"recommend"`.
+| `data-gd-fb-colorscheme` | `"light"` | The colour scheme for the button. Valid options are `"light"` and `"dark"`.
+| `data-gd-fb-font` | none | Sets the font for the button. Valid options are `"arial"`, `"lucida grande"`, `"segoe ui"`, `"tahoma"`, `"trebuchet ms"` and `"verdana"` |
 
 **Broadcasted Events:** None
 
@@ -203,6 +216,12 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ### Twitter Bookmark
 
+> **ID:** `tw-bookmark`
+> **Groups:** `bookmark`
+> **Pack:** Social Registration and Sharing
+
+**Example:**
+
 ```html
 <div data-gd-plugin="tw-bookmark"></div>
 ```
@@ -211,6 +230,15 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 | name | default | description |
 |------|---------|-------------|
+| `data-gd-tw-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
+| `data-gd-tw-via` | none | The Twitter username to attribute the tweet to. |
+| `data-gd-tw-text` | none | Some text to prefill the tweet box with. |
+| `data-gd-tw-related` | none | Related accounts to recommend the user to follow after tweeting. |
+| `data-gd-tw-count` | none | The position of the total tweet count. |
+| `data-gd-tw-lang` | none | The language to use for the tweet button. |
+| `data-gd-tw-hashtags` | none | Comma separated hashtags to append to the tweet. |
+| `data-gd-tw-size` | none | The size of the button. |
+| `data-gd-tw-dnt` | none | Whether to turn on the DNT header to opt users out of content personalisation. |
 
 **Broadcasted Events:** None
 
@@ -222,9 +250,11 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 > :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
-> **ID:** `all-login`
+> **ID:** `all-bookmark`
 > **Group members:** `fb-bookmark`, `tw-bookmark`
 > **Pack:** Social Registration and Sharing
+
+**Example:**
 
 ```html
 <div data-gd-plugin="all-bookmark"></div>
@@ -238,6 +268,12 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 ---
 
 ### Facebook Share
+
+> **ID:** `fb-share`
+> **Groups:** `share`
+> **Pack:** Social Registration and Sharing
+
+**Example:**
 
 ```html
 <div data-gd-plugin="fb-share"></div>
@@ -255,6 +291,12 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 ---
 
 ### Twitter Share
+
+> **ID:** `tw-share`
+> **Groups:** `share`
+> **Pack:** Social Registration and Sharing
+
+**Example:**
 
 ```html
 <div data-gd-plugin="tw-share"></div>
@@ -275,9 +317,11 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 > :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
-> **ID:** `all-login`
+> **ID:** `all-share`
 > **Group members:** `fb-share`, `tw-share`
 > **Pack:** Social Registration and Sharing
+
+**Example:**
 
 ```html
 <div data-gd-plugin="all-share"></div>

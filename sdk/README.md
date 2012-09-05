@@ -99,7 +99,7 @@ All plugins broadcast at least some events &mdash; the exact events they broadca
 Regardless of what event you are handling, the code pattern is the same:
 
 ```js
-gd.events('/some/event/name').subscribe(function(arg1, arg2, ...) {
+gd.event('/some/event/name').subscribe(function(arg1, arg2, ...) {
   // Code for handling this event goes in here.
 });
 ```
@@ -111,7 +111,7 @@ If an event provides data, your callback will be passed one argument for each pi
 One nice feature of the `subscribe` method is that you can set the context of `this` when your callback is invoked:
 
 ```js
-gd.events('/some/event/name').subscribe([callback, context]);
+gd.event('/some/event/name').subscribe([callback, context]);
 ```
 
 Whatever object you provide as the value of `context` in this format of `subscribe` will become the value of `this` when the callback is triggered by an event broadcast.
@@ -119,8 +119,8 @@ Whatever object you provide as the value of `context` in this format of `subscri
 Even if a plugin reloads itself, the event names are constant, so you don't need to worry about memory leaks with the callbacks. Regardless, if you do want to unsubcribe a plugin, you can do so by calling the `unsubscribe` method:
 
 ```js
-gd.events('/some/event/name').subscribe(callback);
-gd.events('/some/event/name').unsubscribe(callback);
+gd.event('/some/event/name').subscribe(callback);
+gd.event('/some/event/name').unsubscribe(callback);
 ```
 
 You can remove multiple callbacks at once:
@@ -132,7 +132,7 @@ gd.event('/some/event/name').unsubscribe(callback1, callback2, ...);
 Note that `subscribe` and `unsubscribe` both return an object suitable for chaining with `broadcast`:
 
 ```js
-gd.events('/some/event/name').broadcast().unsubscribe(callback);
+gd.event('/some/event/name').broadcast().unsubscribe(callback);
 ```
 
 ### Broadcasting
@@ -142,7 +142,7 @@ At this stage, most of the plugins listen to events that are really only useful 
 As with subscribing to events, you can broadcast events with a common code pattern:
 
 ```js
-gd.events('/some/event/name').broadcast(arg1, arg2, ...);
+gd.event('/some/event/name').broadcast(arg1, arg2, ...);
 ```
 
 You don't have to provide the `broadcast` method with any arguments if you don't want, but if you do they will be used as the arguments when calling any callbacks for the event you fire.
@@ -152,5 +152,5 @@ The `broadcast` method is synchronous, which means that if there are a lot of ca
 Again, as with the `subscribe` and `unsubscribe` methods, `broadcast` returns an object suitable for chaining:
 
 ```js
-gd.events('/some/event/name').subscribe(callback).broadcast();
+gd.event('/some/event/name').subscribe(callback).broadcast();
 ```

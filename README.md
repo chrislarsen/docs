@@ -8,21 +8,39 @@ of the platform.
 
 ## Documentation Table of Contents
 
-* [The Backend APIs](https://github.com/globaldawn/docs/blob/master/apis/README.md)
+We recommend that you read the following three piece of documentation when starting to work with the Global Dawn platform for the first time (preferably in the order given):
+
 * [The JavaScript SDK](https://github.com/globaldawn/docs/blob/master/sdk/README.md)
 * [The HTML Plugins](https://github.com/globaldawn/docs/blob/master/plugins/README.md)
+* [The Backend APIs](https://github.com/globaldawn/docs/blob/master/apis/README.md)
+
+This should give you a comprehensive set of usage instructions for the platform. For a higher level overview, see the following section.
 
 ## Overview
 
-### The Backend APIs
+The Global Dawn platform allows you to enrich your customer's experience by applying our intelligent relationship, content and interest graph to their user journey. Through the simple use of a few tools, you can customise the experience for a customer to their personal preferences &mdash; the result is mesurable value: new customers, activated users, better retention, more referrals and new revenue.
 
 ### The JavaScript SDK
 
+The first step to applying our services to your site is through the use of the JavaScript SDK. This toolkit, when loaded on your site, searches for any of the numerous HTML plugins that we offer and loads them. The installation, configuration and initialisation of the SDK is simple: with a few lines of JavaScript, you can have social registration on your site in minutes &mdash; or perhaps, you wish to add social bookmarking, which can also be added in just as short a time.
+
 ### The HTML Plugins
+
+The SDK looks through any HTML document it's loaded within for some special markup that indicates a plugin should be loaded. You can add as many plugins as you want, and for each, the markup is simple and concise. The net result is that in minutes, you can add services to your site that are rich and well tested &mdash; and in most cases, it's a single line of HTML!
+
+### The Backend APIs
+
+The plugins, when started by the SDK, need to communicate with our platform to access our graph data. It does this by talking to our back-end APIs through a small proxy script located on your server.
+
+We make available a large number of extra APIs that can be called server-side by your website for increased integration. These are well documented and tested, and can give you access to a rich set of data or services to work with your users and their interactions with your site.
 
 ## Notes on the Documentation
 
+The main documentation is referenced above, where you'll find links to Markdown files with the specifics on our platform. In addition, there's an `examples/` directory inside of which you'll find some sample code. We encourage you to fork this repository to try this code out, and submit pull requests to add interesting examples of your own!
+
 ## Help Us Make It Better
+
+This documentation is always evolving. We encorage you to submit pull requests and issues if you notice mistakes, or have questions regarding an API, a plugin or the SDK. We'll endeavour to merge any pull requests as soon as possible (nice code permitting!)
 
 ## License
 

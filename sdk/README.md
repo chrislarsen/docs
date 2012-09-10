@@ -48,7 +48,7 @@ window.gdLoaded = function(gd) {
 
 We recommend you define this function in a `<script>` tag (an external script is fine) **directly before the `<script>` tag that loads the SDK**.
 
-Note that this callback gets passed an reference to the SDK, which you can use to do the actual starup and configuration of it. To do this, simply call `gd.init` (make sure you do this inside the `window.gdLoaded` callback we just defined):
+Note that this callback gets passed a reference to the SDK, which you can use to do the actual starup and configuration of it. To do this, simply call `gd.init` (make sure you do this inside the `window.gdLoaded` callback we just defined):
 
 ```js
 gd.init({

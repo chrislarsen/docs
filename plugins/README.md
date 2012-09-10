@@ -42,7 +42,7 @@ All plugins broadcast or listen to some common events that the SDK itself is in 
 
 | name | description | arguments |
 |------|-------------|-----------|
-| `/gd/plugin/loaded/<group>` | This event is fired once for each group that a plugin belongs to. A plugin internally listens to this iself to know when it's markup is ready so it can do any initialisation it needs to do. You can use this event to perform an action when a plugin is ready. | One arguments: a reference to the plugin that was loaded. |
+| `/gd/plugin/loaded/<group>` | This event is fired once for each group that a plugin belongs to. A plugin internally listens to this iself to know when it's markup is ready so it can do any initialisation it needs to do. You can use this event to perform an action when a plugin is ready. | One argument: a reference to the plugin that was loaded. |
 
 For brevity, these common events are not listed again under each plugin below.
 

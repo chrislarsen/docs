@@ -174,3 +174,7 @@ Again, as with the `subscribe` and `unsubscribe` methods, `broadcast` returns an
 ```js
 gd.event('/some/event/name').subscribe(callback).broadcast();
 ```
+
+## Next Steps
+
+:checkered_flag: &nbsp;Now that your SDK is ready to run, move on to reading the [the documentation on the plugins](https://github.com/globaldawn/docs/blob/master/plugins/README.md) and add some declarative markup to your documents to test your setup.

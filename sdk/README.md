@@ -63,7 +63,7 @@ The `gd.init` function takes one argument, a key/value `Object` of options to ch
 | `proxyPath` | `String` | `"/gd/proxy"` | The path to the proxy through which the communication to the APIs will happen. This **must** be on the same domain and port as the page which is loading the SDK, or you'll get cross domain issues. Set the value of this option to the path at which your proxy (as configured previously in this guide) is listening. |
 | `loadStylesheets` | `Boolean` | `true` | Set this to false to disable the loading of any stylesheets for the plugins. This allows you to completely control the look and feel of any plugins. |
 
-The return value of `gd.init` is a "promise", which means you can add a callback for when this promised data is finished fetching by calling the `then` function as in the above example. Note that this is completely optional &mdash; if you don't need to subscribe to or broadcast any events, then you can just drop the `then` call.
+The return value of `gd.init` is a "promise", and you can add a callback for when the SDK startiup is finished by adding a callback using the `then` function. Whilst this is completely optional, if you need to use SDK events you will need to define this &mdash; if you don't need to subscribe to or broadcast any events, then you can just drop the `then` call.
 
 ```js
 gd.init({
@@ -128,9 +128,9 @@ One nice feature of the `subscribe` method is that you can set the context of `t
 gd.event('/some/event/name').subscribe([callback, context]);
 ```
 
-Whatever object you provide as the value of `context` in this format of `subscribe` will become the value of `this` when the callback is triggered by an event broadcast.
+The object you provide as the value of `context` will become the value of `this` when the callback is triggered by an event broadcast. If you choose the use the `subscribe(callback)` format instead, the context will be be global (ie. `window`).
 
-Even if a plugin reloads itself, the event names are constant, so you don't need to worry about memory leaks with the callbacks. Regardless, if you do want to unsubcribe a plugin, you can do so by calling the `unsubscribe` method:
+Even when a plugin reloads itself, the event names stay constant, so you don't need to worry about memory leaks with the callbacks. Regardless, if you do want to unsubcribe a plugin, you can do so by calling the `unsubscribe` method:
 
 ```js
 gd.event('/some/event/name').subscribe(callback);
@@ -151,9 +151,9 @@ gd.event('/some/event/name').broadcast().unsubscribe(callback);
 
 ### Broadcasting
 
-At this stage, most of the plugins listen to events that are really only useful internally to the SDK. That said, if a plugin does listen for an event, it will be listed in [the documentation on the plugins](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
+Most of the plugins listen to events that are really only useful internally to the SDK. That said, if a plugin does listen for an event, it will be listed in [the documentation on the plugins](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
 
-As with subscribing to events, you can broadcast events with a common code pattern:
+As with subscribing to events, you can broadcast events with a similar code pattern:
 
 ```js
 gd.event('/some/event/name').broadcast(arg1, arg2, ...);
@@ -161,7 +161,7 @@ gd.event('/some/event/name').broadcast(arg1, arg2, ...);
 
 You don't have to provide the `broadcast` method with any arguments if you don't want, but if you do they will be used as the arguments when calling any callbacks for the event you fire.
 
-The `broadcast` method is synchronous, which means that if there are a lot of callbacks, it won't pass control onto the next line of code until all the callbacks are finished.
+> :information_source: &nbsp;**Note:** The `broadcast` method is synchronous, which means that if there are a lot of callbacks, it won't pass control onto the next line of code until all the callbacks are finished.
 
 Again, as with the `subscribe` and `unsubscribe` methods, `broadcast` returns an object suitable for chaining:
 

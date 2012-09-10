@@ -6,11 +6,17 @@
 
 In order to communicate with the APIs without exposing the API key to prying eyes, the SDK requires a very basic reverse proxy to be set up &mdash; it is through this proxy that it will call the back-end. To make this process as simple as possible, [we provide a set of example implementations](https://github.com/globaldawn/api-example-proxy) in a wide variety of languages or configurations.
 
-We strongly recommend tha you use the Nginx, Apache, or other web server versions as provided where possible &mdash; these are much faster than the alternative implementations by an order of magnitude.
+You need to install one of these proxies (or write your own, see below) on your server for the SDK and plugins to work. If you use one of the example proxies, follow the instructions for installation in the folder for that implementation.
+
+> :information_source: &nbsp;**Note:** We strongly recommend that you use one of the web server implementations (Nginx, Apache, etc.) &mdash; these are much faster than the alternative implementations by an order of magnitude, as they are meant for this kind of job.
 
 #### Configuring The Proxy
 
-TODO
+To configure any of the example proxies, you simply need to open the script or configuration provided and add your API key (you can find this in the Admin Manger). Once you have done this, deploy the proxy to your server and test that it is working by sending a GET request to:
+
+    <path to the proxy>/ping
+
+If you're pointing to the right place, you should get a response: "pong".
 
 #### Writing Your Own Proxy Implementation
 

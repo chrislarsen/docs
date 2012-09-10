@@ -15,13 +15,13 @@ All plugins are generally written as simple `<div>` tags with [data attributes](
 An example of a simple plugin is as follows:
 
 ```html
-<div data-gd-plugin="fb-login"></div>
+<div data-gd-plugin="facebook-login"></div>
 ```
 
-This would start up the `fb-login` plugin. This particular plugin can also take some options, so here's an example with one of them provided:
+This would start up the `facebook-login` plugin. This particular plugin can also take some options, so here's an example with one of them provided:
 
 ```html
-<div data-gd-plugin="fb-login" data-gd-popup="false" data-gd-success-redirect="http://foo.com/bar" data-gd-failure-redirect="http://foo.com/moo"></div>
+<div data-gd-plugin="facebook-login" data-gd-popup="false" data-gd-success-redirect="http://foo.com/bar" data-gd-failure-redirect="http://foo.com/moo"></div>
 ```
 
 Note that every single declarative attribute we add is prefixed with `data-gd` &mdash; the `data-` part is mandated by the HTML5 specification, and the `gd-` part is our namespace to ensure we don't clash with any other data attributes.
@@ -48,7 +48,7 @@ For brevity, these common events are not listed again under each plugin below.
 
 ### Facebook Login
 
-> **ID:** `fb-login`
+> **ID:** `facebook-login`
 > **Groups:** `login`
 > **Pack:** Social Registration and Sharing
 
@@ -57,7 +57,7 @@ A button that allows the user to login with Facebook. If the user is already log
 **Example:**
 
 ```html
-<div data-gd-plugin="fb-login"></div>
+<div data-gd-plugin="facebook-login"></div>
 ```
 
 **Options:**
@@ -69,7 +69,6 @@ A button that allows the user to login with Facebook. If the user is already log
 | `data-gd-failure-redirect` | none | A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`. |
 
 **Broadcasted Events:**
-
 
 | name | description | arguments |
 |------|-------------|-----------|
@@ -88,7 +87,7 @@ A button that allows the user to login with Facebook. If the user is already log
 
 ### Twitter Login
 
-> **ID:** `tw-login`
+> **ID:** `twitter-login`
 > **Groups:** `login`
 > **Pack:** Social Registration and Sharing
 
@@ -97,7 +96,7 @@ A button that allows the user to login with Twitter. If the user is already logg
 **Example:**
 
 ```html
-<div data-gd-plugin="tw-login"></div>
+<div data-gd-plugin="twitter-login"></div>
 ```
 
 **Options:**
@@ -110,6 +109,44 @@ A button that allows the user to login with Twitter. If the user is already logg
 
 **Broadcasted Events:**
 
+| name | description | arguments |
+|------|-------------|-----------|
+| `/gd/user/login/success` | Broadcasted when a user successfully signs in using this plugin.| none |
+| `/gd/user/login/failure` | Broadcasted when a user fails to sign in using this plugin. | none |
+
+**Subscribed Events:**
+
+| name | description | arguments |
+|------|-------------|-----------|
+| `/gd/user/logout` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
+| `/gd/user/login/success` | Subscribes to this so it can show and hide the login buttons on change of the user's status | none |
+| `/gd/user/login/failure` | Subscribes to this so it can show and hide the login buttons on change of the user's status. | none |
+
+---
+
+### Google Login
+
+> **ID:** `google-login`
+> **Groups:** `login`
+> **Pack:** Social Registration and Sharing
+
+A button that allows the user to login with a Google account. If the user is already logged in, the plugin will be empty until they log out.
+
+**Example:**
+
+```html
+<div data-gd-plugin="google-login"></div>
+```
+
+**Options:**
+
+| name | default | description |
+|------|---------|-------------|
+|`data-gd-popup` | `"true"` | Whether to show the login in a popup window. If set to `"false"`, it will redirect the entire current window to the login provider. If this option is set to `"false"`, you must set the `"data-gd-success-redirect"` and `"data-gd-failure-redirect"` properties. |
+| `data-gd-success-redirect` | none | A fully qualified URL to redirect to if the login process succeeds. This only has an effect if `data-gd-popup` is set to `"false"`. |
+| `data-gd-failure-redirect` | none | A fully qualified URL to redirect to if the login process fails. This only has an effect if `data-gd-popup` is set to `"false"`. |
+
+**Broadcasted Events:**
 
 | name | description | arguments |
 |------|-------------|-----------|
@@ -150,7 +187,6 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 
 **Broadcasted Events:**
 
-
 | name | description | arguments |
 |------|-------------|-----------|
 | `/gd/user/login/success` | Broadcasted when a user successfully signs in using this plugin.| none |
@@ -171,7 +207,7 @@ If the user is logged in, this plugin will show their avatar, and links to logou
 > :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
 > **ID:** `all-login`
-> **Group members:** `fb-login`, `tw-login`, `user-status`
+> **Group members:** `facebook-login`, `twitter-login`, `google-login`, `user-status`
 > **Pack:** Social Registration and Sharing
 
 This plugin renders the Facebook Login, Twitter Login, and User Status plugins using a single piece of declarative markup. Any options you set on this plugin are effectively passed through to the other plugins it starts up.
@@ -186,27 +222,27 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ### Facebook Bookmark
 
-> **ID:** `fb-bookmark`
+> **ID:** `facebook-bookmark`
 > **Groups:** `bookmark`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="fb-bookmark"></div>
+<div data-gd-plugin="facebook-bookmark"></div>
 ```
 
 **Options:**
 
 | name | default | description |
 |------|---------|-------------|
-| `data-gd-fb-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
-| `data-gd-fb-width` | `"450"` | The width of the button. |
-| `data-gd-fb-show-faces` | `"true"` | Whether to show avatars of friends below the share button for a logged in useri (this only shows when `data-gd-fb-layout` is set to `"standard"`). |
-| `data-gd-fb-layout`| `"standard"` | The layout of the like button. Possible values are `"standard"` (displays test to the right of the button, and faces below), `"button_count"` (displays total number of likes to the right of the button), and `"box_count"` (displays total number of likes in a callout above the button). |
-| `data-gd-fb-action` | `"like"` | The verb to display on the button. valid options are `"like"` and `"recommend"`.
-| `data-gd-fb-colorscheme` | `"light"` | The colour scheme for the button. Valid options are `"light"` and `"dark"`.
-| `data-gd-fb-font` | none | Sets the font for the button. Valid options are `"arial"`, `"lucida grande"`, `"segoe ui"`, `"tahoma"`, `"trebuchet ms"` and `"verdana"` |
+| `data-gd-facebook-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
+| `data-gd-facebook-width` | `"450"` | The width of the button. |
+| `data-gd-facebook-show-faces` | `"true"` | Whether to show avatars of friends below the share button for a logged in useri (this only shows when `data-gd-facebook-layout` is set to `"standard"`). |
+| `data-gd-facebook-layout`| `"standard"` | The layout of the like button. Possible values are `"standard"` (displays test to the right of the button, and faces below), `"button_count"` (displays total number of likes to the right of the button), and `"box_count"` (displays total number of likes in a callout above the button). |
+| `data-gd-facebook-action` | `"like"` | The verb to display on the button. valid options are `"like"` and `"recommend"`.
+| `data-gd-facebook-colorscheme` | `"light"` | The colour scheme for the button. Valid options are `"light"` and `"dark"`.
+| `data-gd-facebook-font` | none | Sets the font for the button. Valid options are `"arial"`, `"lucida grande"`, `"segoe ui"`, `"tahoma"`, `"trebuchet ms"` and `"verdana"` |
 
 **Broadcasted Events:** None
 
@@ -216,29 +252,29 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ### Twitter Bookmark
 
-> **ID:** `tw-bookmark`
+> **ID:** `twitter-bookmark`
 > **Groups:** `bookmark`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="tw-bookmark"></div>
+<div data-gd-plugin="twitter-bookmark"></div>
 ```
 
 **Options:**
 
 | name | default | description |
 |------|---------|-------------|
-| `data-gd-tw-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
-| `data-gd-tw-via` | none | The Twitter username to attribute the tweet to. |
-| `data-gd-tw-text` | none | Some text to prefill the tweet box with. |
-| `data-gd-tw-related` | none | Related accounts to recommend the user to follow after tweeting. |
-| `data-gd-tw-count` | none | The position of the total tweet count. |
-| `data-gd-tw-lang` | none | The language to use for the tweet button. |
-| `data-gd-tw-hashtags` | none | Comma separated hashtags to append to the tweet. |
-| `data-gd-tw-size` | none | The size of the button. |
-| `data-gd-tw-dnt` | none | Whether to turn on the DNT header to opt users out of content personalisation. |
+| `data-gd-twitter-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
+| `data-gd-twitter-via` | none | The Twitter username to attribute the tweet to. |
+| `data-gd-twitter-text` | none | Some text to prefill the tweet box with. |
+| `data-gd-twitter-related` | none | Related accounts to recommend the user to follow after tweeting. |
+| `data-gd-twitter-count` | none | The position of the total tweet count. |
+| `data-gd-twitter-lang` | none | The language to use for the tweet button. |
+| `data-gd-twitter-hashtags` | none | Comma separated hashtags to append to the tweet. |
+| `data-gd-twitter-size` | none | The size of the button. |
+| `data-gd-twitter-dnt` | none | Whether to turn on the DNT header to opt users out of content personalisation. |
 
 **Broadcasted Events:** None
 
@@ -251,7 +287,7 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 > :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
 > **ID:** `all-bookmark`
-> **Group members:** `fb-bookmark`, `tw-bookmark`
+> **Group members:** `facebook-bookmark`, `twitter-bookmark`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
@@ -264,14 +300,14 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ### Facebook Share
 
-> **ID:** `fb-share`
+> **ID:** `facebook-share`
 > **Groups:** `share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="fb-share"></div>
+<div data-gd-plugin="facebook-share"></div>
 ```
 
 **Options:**
@@ -287,14 +323,14 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ### Twitter Share
 
-> **ID:** `tw-share`
+> **ID:** `twitter-share`
 > **Groups:** `share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="tw-share"></div>
+<div data-gd-plugin="twitter-share"></div>
 ```
 
 **Options:**
@@ -313,7 +349,7 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 > :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
 > **ID:** `all-share`
-> **Group members:** `fb-share`, `tw-share`
+> **Group members:** `facebook-share`, `twitter-share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**

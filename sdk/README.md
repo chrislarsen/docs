@@ -42,7 +42,7 @@ Without configuring the SDK, none of your plugins will load on the page. When th
 
 ```js
 window.gdLoaded = function(gd) {
-  //
+  // ...
 };
 ```
 

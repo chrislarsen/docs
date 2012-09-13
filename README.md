@@ -34,6 +34,14 @@ The plugins, when started by the SDK, need to communicate with our platform to a
 
 We make available a large number of extra APIs that can be called server-side by your website for increased integration. These are well documented and tested, and can give you access to a rich set of data or services to work with your users and their interactions with your site.
 
+### The Admin Manager
+
+The Admin Manager is a web based interface where developers and non developers in your organisation can configure the services used, as well as view reports.
+
+As a developer, you will use it for the following: setting up your domains, providing Global Dawn with your social network keys, finding your Global Dawn API keys, setting up call back URLs, setting up service messages (e.g. registration confirmation emails). See more details [on our support page](http://support.globaldawn.co).
+
+Your Global Dawn account manager can provide you with a login or if a colleague of yours has already got one, they should invite you to get your own account (from the 'Settings > Account Users' section of the Admin Manager).
+
 ## Notes on the Documentation
 
 The main documentation is referenced above, where you'll find links to Markdown files with the specifics on our platform. In addition, there's an `examples/` directory inside of which you'll find some sample code. We encourage you to fork this repository to try this code out, and submit pull requests to add interesting examples of your own!

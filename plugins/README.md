@@ -222,16 +222,16 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ---
 
-### Facebook Bookmark
+### Facebook Public Share
 
-> **ID:** `facebook-bookmark`
-> **Groups:** `bookmark`
+> **ID:** `facebook-public-share`
+> **Groups:** `public-share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="facebook-bookmark"></div>
+<div data-gd-plugin="facebook-public-share"></div>
 ```
 
 **Options:**
@@ -252,16 +252,16 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ---
 
-### Twitter Bookmark
+### Twitter Public Share
 
-> **ID:** `twitter-bookmark`
-> **Groups:** `bookmark`
+> **ID:** `twitter-public-share`
+> **Groups:** `public-share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="twitter-bookmark"></div>
+<div data-gd-plugin="twitter-public-share"></div>
 ```
 
 **Options:**
@@ -284,32 +284,32 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ---
 
-### All Bookmark
+### All Public Share
 
 > :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
-> **ID:** `all-bookmark`
-> **Group members:** `facebook-bookmark`, `twitter-bookmark`
+> **ID:** `all-public-share`
+> **Group members:** `facebook-public-share`, `twitter-public-share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="all-bookmark"></div>
+<div data-gd-plugin="all-public-share"></div>
 ```
 
 ---
 
-### Facebook Share
+### Facebook Personal Share
 
-> **ID:** `facebook-share`
+> **ID:** `facebook-personal-share`
 > **Groups:** `share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="facebook-share"></div>
+<div data-gd-plugin="facebook-personal-share"></div>
 ```
 
 **Options:**
@@ -323,16 +323,16 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ---
 
-### Twitter Share
+### Twitter Personal Share
 
-> **ID:** `twitter-share`
+> **ID:** `twitter-personal-share`
 > **Groups:** `share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="twitter-share"></div>
+<div data-gd-plugin="twitter-personal-share"></div>
 ```
 
 **Options:**
@@ -346,16 +346,16 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 ---
 
-### All Share
+### All Personal Share
 
 > :link: &nbsp;**Group Plugin**: This is a group plugin, so for the options and events that this plugin uses, see the documentation for the members of this group.
 
-> **ID:** `all-share`
-> **Group members:** `facebook-share`, `twitter-share`
+> **ID:** `all-personal-share`
+> **Group members:** `facebook-personal-share`, `twitter-personal-share`
 > **Pack:** Social Registration and Sharing
 
 **Example:**
 
 ```html
-<div data-gd-plugin="all-share"></div>
+<div data-gd-plugin="all-personal-share"></div>
 ```

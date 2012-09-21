@@ -12,7 +12,7 @@ You need to install one of these proxies (or write your own, see below) on your 
 
 #### Configuring The Proxy
 
-To configure any of the example proxies, you simply need to open the script or configuration provided and add your API key (you can find this in the Admin Manger). Once you have done this, deploy the proxy to your server and test that it is working by sending a GET request to:
+To configure any of the example proxies, you simply need to open the script or configuration provided and add your API key (you can find this in the Admin Manager). Once you have done this, deploy the proxy to your server and test that it is working by sending a GET request to:
 
     <path to the proxy>/ping
 

@@ -359,3 +359,64 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 ```html
 <div data-gd-plugin="all-personal-share"></div>
 ```
+
+### Social Recommendations
+
+> **ID:** `social-recommendations`
+> **Pack:** Social Recommendations
+
+This plugin displays friends of the currently logged in user who are likely to be interested in one or more topics. These topics can either be explicitly defined, or can be inferred from the content surrounding the plugin.
+
+Example:
+
+```html
+<div id="client-social-recs" data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum" data-gd-url="http://www.globaldawn.co" data-gd-message="Please share!"></div>
+```
+
+**Options:**
+
+| name | optional | default | description |
+|------|----------|---------|-------------|
+| `title` | yes | an empty string | the title text to display above the plugin. The number of interested friends is appended to this string |
+| `topics` | yes | inferred from the contents of the page | a comma delimited string of topics. These can be sourced from Freebase |
+| `count` | yes | `8` | the number of results to display per page |
+| `facebookAction` | yes | `send` | the type of action to use when the user is logged in via Facebook. Valid actions are `send` and `invite`. |
+| `facebookEventId` | yes (unless `facebookAction` is `invite`, in which case mandatory | The id of the Facebook event to invite friends to. |
+| `message` | no | | The message to send to friends. In some situations this can be edited by the user. |
+| `url` | yes | the URL of the current page | The URL to send. |
+| `enableMultiselect` | yes | `false` | If enabled and using Facebook event invites, allow multiple friends to be messaged at the same time |
+| `location` | yes | no location | A comma seperated list of longitude and latitude. If supplied, friends who are close to this location are scored more highly than ones who are further away |
+| `radius` | yes | | Specified how close a user has to be to `location` to be considered. Units are kilometers. |
+
+**Generated HHTML:**
+
+This plugin generates the HTML shown below. This is injected as a child of the plugin div. Variables are shown using {{ and }}.
+
+```html
+<div class="gd-social-recommendations" xmlns="http://www.w3.org/1999/html">
+    <div class="recommendation-title">{{title}} (1)</div>
+    <div class="recommendation-items">
+            <div class="recommendation-item">
+                <div class="recommendation-image">
+                    <a href="{{profile url}}" target="_blank">
+                        <img src="{{avatar url}}" alt="{{users name}} avatar">
+                    </a>
+                </div>
+                <div class="recommendation-details">
+                    <span class="recommendation-name"><a href="{{profile url}}" target="_blank">{{users name}}</a></span>
+                    <span class="recommendation-context"></span>
+                    <span><a class="recommendation-action" data-gd-social-popup="{{social network}}" href="{{gd action url}}">{{gd action verb}}</a></span>
+                </div>
+            </div>
+    </div>
+    <div class="recommendation-pagination">
+        <div class="recommendation-pagination-current">
+            Page <span class="recommendation-pagination-page">1</span> of  <span class="recommendation-pagination-total">1</span>
+        </div>
+        <div class="recommendation-pagination-controls">
+            <a class="recommendation-pagination-controls-previous" href="#" data-gd-page="{{previous page number}}">Previous</a>
+            <a class="recommendation-pagination-controls-next" href="#" data-gd-page="{{next page number}}">Next</a>
+        </div>
+    </div>
+</div>
+```

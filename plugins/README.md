@@ -377,16 +377,21 @@ Example:
 
 | name | optional | default | description |
 |------|----------|---------|-------------|
-| `title` | yes | an empty string | the title text to display above the plugin. The number of interested friends is appended to this string |
-| `topics` | yes | inferred from the contents of the page | a comma delimited string of topics. These can be sourced from Freebase |
-| `count` | yes | `8` | the number of results to display per page |
-| `facebookAction` | yes | `send` | the type of action to use when the user is logged in via Facebook. Valid actions are `send` and `invite`. |
-| `facebookEventId` | yes (unless `facebookAction` is `invite`, in which case mandatory | The id of the Facebook event to invite friends to. |
-| `message` | no | | The message to send to friends. In some situations this can be edited by the user. |
-| `url` | yes | the URL of the current page | The URL to send. |
-| `enableMultiselect` | yes | `false` | If enabled and using Facebook event invites, allow multiple friends to be messaged at the same time |
-| `location` | yes | no location | A comma seperated list of longitude and latitude. If supplied, friends who are close to this location are scored more highly than ones who are further away |
-| `radius` | yes | | Specified how close a user has to be to `location` to be considered. Units are kilometers. |
+| `data-gd-title` | yes | an empty string | the title text to display above the plugin. The number of interested friends is appended to this string |
+| `data-gd-topics` | yes | inferred from the contents of the page | a comma delimited string of topics. These can be sourced from Freebase |
+| `data-gd-count` | yes | `8` | the number of results to display per page |
+| `data-gd-facebook-action` | yes | `send` | the type of action to use when the user is logged in via Facebook. Valid actions are `send` and `invite`. |
+| `data-gd-facebook-event-id` | yes (unless `data-gd-facebook-action` is `invite`, in which case mandatory | The id of the Facebook event to invite friends to. |
+| `data-gd-message` | no | | The message to send to friends. In some situations this can be edited by the user. |
+| `data-gd-url` | yes | the URL of the current page | The URL to send. |
+| `data-gd-enable-multiselect` | yes | `false` | If enabled and using Facebook event invites, allow multiple friends to be messaged at the same time |
+| `data-gd-location` | yes | no location | A comma seperated pair of longitude and latitude. If supplied, friends who are close to this location are scored more highly than ones who are further away |
+| `data-gd-radius` | yes | | Specified how close a user has to be to `data-gd-location` to be considered. Units are kilometers. |
+| `data-gd-min-results` | yes | 0 | Specifies the minimum number of results to show. If the initial pass at finding interested friends results in fewer than this number, the returned list is augmented with friends sourced from the "fallback" list (see below) |
+
+**Fallback lists**
+
+If the Global Dawn platform is unable to find enough interested friends, a fallback list is returned. The exact mechanics behind this vary depending on the social network, but in all instances we try to provide a list of close friends.
 
 **Generated HHTML:**
 

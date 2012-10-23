@@ -16,6 +16,20 @@ We recommend that you read the following three piece of documentation when start
 
 This should give you a comprehensive set of usage instructions for the platform. For a higher level overview, see the following section.
 
+## Quick Start
+
+In order to get you up and running as quickly as possible, here's a checklist of tasks you need to complete to use the Global Dawn platform:
+
+1. Add a valid domain in the Admin Manager. For example, if you are going to be using the platform on `example.com`, you need to add `example.com` to the domains in Admin Manager for the APIs and SDKs to work. Your Global Dawn account manager can give you assistance with this.
+2. Set up a Facebook, Twitter, and/or Google app as required for your domain. Add the API keys for these apps to your account in the Admin Manager. Your Global Dawn account manager is able to help with this task.
+3. Choose and setup a proxy implementation as described [in the SDK documentation](https://github.com/globaldawn/docs/blob/master/sdk/README.md). Test that the proxy is working before continuing by following the instructions in the SDK documentation.
+4. Add as many plugins as you want from the list of available plugins [in the HTML Plugins documentation](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
+5. (Optional) Read and implement server to server APIs as required, which you'll find detailed [in the API documentation](https://github.com/globaldawn/docs/blob/master/apis/README.md).
+
+## Example Site
+
+As you read along with these docs, it's useful to have a visual example for reference. You can view an example of all plugins at the following URL: https://api-example-client.globaldawn.co/
+
 ## Overview
 
 The Global Dawn platform allows you to enrich your customer's experience by applying our intelligent relationship, content and interest graph to their user journey. Through the simple use of a few tools, you can customise the experience for a customer to their personal preferences &mdash; the result is mesurable value: new customers, activated users, better retention, more referrals and new revenue.
@@ -41,16 +55,6 @@ The Admin Manager is a web based interface where developers and non developers i
 As a developer, you will use it for the following: setting up your domains, providing Global Dawn with your social network keys, finding your Global Dawn API keys, setting up call back URLs, setting up service messages (e.g. registration confirmation emails). See more details [on our support page](http://support.globaldawn.co).
 
 Your Global Dawn account manager can provide you with a login or if a colleague of yours has already got one, they should invite you to get your own account (from the 'Settings > Account Users' section of the Admin Manager).
-
-## Quick Start
-
-In order to get you up and running as quickly as possible, here's a checklist of tasks you need to complete to use the Global Dawn platform:
-
-1. Add a valid domain in the Admin Manager. For example, if you are going to be using the platform on `example.com`, you need to add `example.com` to the domains in Admin Manager for the APIs and SDKs to work. Your Global Dawn account manager can give you assistance with this.
-2. Set up a Facebook, Twitter, and/or Google app as required for your domain. Add the API keys for these apps to your account in the Admin Manager. Your Global Dawn account manager is able to help with this task.
-3. Choose and setup a proxy implementation as described [in the SDK documentation](https://github.com/globaldawn/docs/blob/master/sdk/README.md). Test that the proxy is working before continuing by following the instructions in the SDK documentation.
-4. Add as many plugins as you want from the list of available plugins [in the HTML Plugins documentation](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
-5. (Optional) Read and implement server to server APIs as required, which you'll find detailed [in the API documentation](https://github.com/globaldawn/docs/blob/master/apis/README.md).
 
 ## Notes on the Documentation
 

@@ -42,6 +42,16 @@ As a developer, you will use it for the following: setting up your domains, prov
 
 Your Global Dawn account manager can provide you with a login or if a colleague of yours has already got one, they should invite you to get your own account (from the 'Settings > Account Users' section of the Admin Manager).
 
+## Quick Start
+
+In order to get you up and running as quickly as possible, here's a checklist of tasks you need to complete to use the Global Dawn platform:
+
+1. Add a valid domain in the Admin Manager. For example, if you are going to be using the platform on `example.com`, you need to add `example.com` to the domains in Admin Manager for the APIs and SDKs to work. Your Global Dawn account manager can give you assistance with this.
+2. Set up a Facebook, Twitter, and/or Google app as required for your domain. Add the API keys for these apps to your account in the Admin Manager. Your Global Dawn account manager is able to help with this task.
+3. Choose and setup a proxy implementation as described [in the SDK documentation](https://github.com/globaldawn/docs/blob/master/sdk/README.md). Test that the proxy is working before continuing by following the instructions in the SDK documentation.
+4. Add as many plugins as you want from the list of available plugins [in the HTML Plugins documentation](https://github.com/globaldawn/docs/blob/master/plugins/README.md).
+5. (Optional) Read and implement server to server APIs as required, which you'll find detailed [in the API documentation](https://github.com/globaldawn/docs/blob/master/apis/README.md).
+
 ## Notes on the Documentation
 
 The main documentation is referenced above, where you'll find links to Markdown files with the specifics on our platform. In addition, there's an `examples/` directory inside of which you'll find some sample code. We encourage you to fork this repository to try this code out, and submit pull requests to add interesting examples of your own!

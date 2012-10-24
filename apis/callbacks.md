@@ -42,7 +42,7 @@ This callback is invoked when a user logs in.
   "type" : "USER_LOGIN",
   "message" : {
     "user_id" : "50830be587f200febc7f5fac",
-    "email_address" : "phil.messenger@globaldawn.co",
+    "email_address" : "phil.messenger@globaldawn.com",
     "first_name" : "Phil",
     "last_name" : "Messenger",
     "custom_fields" : {
@@ -61,7 +61,7 @@ This callback is invoked when a user profile is altered. The payload of the mess
   "type" : "USER_UPDATE",
   "message" : {
     "user_id" : "50830be587f200febc7f5fac",
-    "email_address" : "phil.messenger@globaldawn.co",
+    "email_address" : "phil.messenger@globaldawn.com",
     "first_name" : "Phil",
     "last_name" : "Messenger",
     "custom_fields" : {

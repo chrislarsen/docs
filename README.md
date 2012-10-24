@@ -28,7 +28,7 @@ In order to get you up and running as quickly as possible, here's a checklist of
 
 ## Example Site
 
-As you read along with these docs, it's useful to have a visual example for reference. You can view an example of all plugins at the following URL: https://api-example-client.globaldawn.co/
+As you read along with these docs, it's useful to have a visual example for reference. You can view an example of all plugins at the following URL: https://api-example-client.globaldawn.com/
 
 ## Overview
 
@@ -52,7 +52,7 @@ We make available a large number of extra APIs that can be called server-side by
 
 The Admin Manager is a web based interface where developers and non developers in your organisation can configure the services used, as well as view reports.
 
-As a developer, you will use it for the following: setting up your domains, providing Global Dawn with your social network keys, finding your Global Dawn API keys, setting up call back URLs, setting up service messages (e.g. registration confirmation emails). See more details [on our support page](http://support.globaldawn.co).
+As a developer, you will use it for the following: setting up your domains, providing Global Dawn with your social network keys, finding your Global Dawn API keys, setting up call back URLs, setting up service messages (e.g. registration confirmation emails). See more details [on our support page](http://support.globaldawn.com).
 
 Your Global Dawn account manager can provide you with a login or if a colleague of yours has already got one, they should invite you to get your own account (from the 'Settings > Account Users' section of the Admin Manager).
 

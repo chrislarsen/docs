@@ -370,7 +370,7 @@ This plugin displays friends of the currently logged in user who are likely to b
 Example:
 
 ```html
-<div id="client-social-recs" data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum" data-gd-url="http://www.globaldawn.co" data-gd-message="Please share!"></div>
+<div id="client-social-recs" data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
 ```
 
 **Options:**

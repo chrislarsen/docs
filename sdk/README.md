@@ -23,8 +23,8 @@ If you're pointing to the right place, you should get a response: "pong".
 You are by no means limited to using the example implementations of the proxy that we have provided. The proxy itself has a very small list of requirements for it to work, which can be implemented easily:
 
 * It must receive requests on the same origin (ie. same domain and port) as all the HTML documents that load the SDK.
-* It should proxy all requsts it receives to `https://apis.globaldawn.co/`.
-* The endpoint the proxy is hosted at should be stripped off &mdash; as an example with the proxy hosted at `/gd/proxy`, a request to `/gd/proxy/apis/test` would be proxied to `https://apis.globaldawn.co/apis/test` (note the `/gd/proxy` portion has been stripped off).
+* It should proxy all requsts it receives to `https://apis.globaldawn.com/`.
+* The endpoint the proxy is hosted at should be stripped off &mdash; as an example with the proxy hosted at `/gd/proxy`, a request to `/gd/proxy/apis/test` would be proxied to `https://apis.globaldawn.com/apis/test` (note the `/gd/proxy` portion has been stripped off).
 * It must preserve all headers.
 * It must preserve, if present, the query string.
 * It must add one additional header, `X-GD-API-Key` &mdash; the value should be the API key for your account.
@@ -37,7 +37,7 @@ As long as these rules are followed, you can implement the proxy any way you cho
 You can load the SDK by simply adding the following script tag in the `<head>` of your documentes:
 
 ```html
-<script src="https://static-files.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
+<script src="https://static-files.globaldawn.com/js/gd-sdk-bootstrap.js"></script>
 ```
 
 This is a very small JavaScript file that loads the SDK from our CDN, making sure the delivery to the client is as fast as possible but ensuring SDK updates are distributed quickly.
@@ -89,7 +89,7 @@ window.gdLoaded = function() {
   });
 }
 </script>
-<script src="https://static-files.globaldawn.co/js/gd-sdk-bootstrap.js"></script>
+<script src="https://static-files.globaldawn.com/js/gd-sdk-bootstrap.js"></script>
 ```
 
 ## Declarative Markup

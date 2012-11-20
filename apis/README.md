@@ -6,3 +6,4 @@ This documentation pack describes the various REST API's exposed by the Global D
 
 * [The Social Registration API](https://github.com/globaldawn/docs/blob/master/apis/login.md)
 * [Callbacks](https://github.com/globaldawn/docs/blob/master/apis/callbacks.md)
+* [Ratings and Reviews API](https://github.com/globaldawn/docs/blob/master/apis/ratings-reviews.md)

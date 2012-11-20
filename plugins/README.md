@@ -425,3 +425,100 @@ This plugin generates the HTML shown below. This is injected as a child of the p
     </div>
 </div>
 ```
+
+---
+
+### Product Reviews
+
+> **ID:** `product-reviews`  
+> **Pack** Ratings and Reviews
+
+This plugin provides the following functionality: 
+
+- Displays a list of user reviews for a particular item or product. 
+- Allows a user to submit a review for a given item or product, using a pre-configured form template.
+
+Example:
+
+<div data-gd-plugin="product-reviews" data-gd-review-template-id="50a51ba5ccf26dc73368f217" data-gd-item-id="unique_item_id" data-gd-page-size="4"></div>
+
+Options:
+
+| name | optional | default | description |
+|------|----------|---------|-------------|
+| `data-gd-review-template-id` | no | none | The ID for the review template that should be used to build the review form |
+| `data-gd-item-id` | no | none | The unique identifier for the product or item to review |
+| `data-gd-page-size` | no | 10 | The number of reviews to include in each page |
+
+**Fallback list** None. An empty list is returned if no reviews exist for the given item. 
+
+**Generated HTML:**
+
+This plugin generates the HTML shown below. This is injected as a child of the plugin div.
+
+```html
+<div class="gd-reviews" xmlns="http://www.w3.org/1999/html">
+	<header>
+		<h3>Reviews</h3>
+		<a data-gd-reviews-add href="/plugins/reviews/add?reviewTemplateId=uniqueTemplateId&itemId=unique_item_id">+ Post a review</a>
+	</header>
+
+	<div class="gd-pagination">
+	<div class="gd-pagination-sort">
+		<a data-gd-page-sort="" href="#">Most Relevant</a>
+		|
+		<a data-gd-page-sort="" href="#">Most Helpful</a>
+		|
+		<a data-gd-page-sort="" href="#">Most Recent</a>
+	</div>
+
+	<div class="gd-pagination-current">
+		Page <span class="gd-pagination-page">1</span> of  <span class="gd-pagination-total">3</span>
+	</div>
+	<div class="gd-pagination-controls">
+		<a  class="gd-pagination-controls-next" href="#" data-gd-page="2">Next</a>
+	</div>
+</div>
+<ul>
+    <li>
+    	<figure><span/></figure>
+    	<article>
+    		<div>19, November, 2012</div>
+    		<div><strong>By: </strong>Anonymous</div>
+        <div >
+		<strong>My Rating:</strong>
+	    	<div data-gd-plugin="star-rating" data-gd-rating="0" data-gd-disabled="true" >
+			<label>
+			  <span>Bad</span>
+			</label>
+			<label>
+			  <span>Average</span>
+			</label>
+			<label>
+			  <span>Excellent</span>
+			</label>
+	    	</div>
+	</div>
+	<div data-gd-reviews-show-when="expanded">
+		<strong>My Comments:</strong>
+		<span >
+			This product is awesome
+		</span>
+	</div>
+	<div data-gd-reviews-summary-togglers>
+		<a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="collapsed">Show more</a>
+		<a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="expanded">Show less</a>
+	</div>
+    	</article>
+    </li>
+ 
+    </div>
+	<div data-gd-reviews-summary-togglers>
+		<a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="collapsed">Show more</a>
+		<a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="expanded">Show less</a>
+	</div>
+    	</article>
+    </li>
+  </ul>
+</div>
+```

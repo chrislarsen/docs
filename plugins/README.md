@@ -238,13 +238,13 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 | name | default | description |
 |------|---------|-------------|
-| `data-gd-facebook-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
-| `data-gd-facebook-width` | `"450"` | The width of the button. |
-| `data-gd-facebook-show-faces` | `"true"` | Whether to show avatars of friends below the share button for a logged in useri (this only shows when `data-gd-facebook-layout` is set to `"standard"`). |
-| `data-gd-facebook-layout`| `"standard"` | The layout of the like button. Possible values are `"standard"` (displays test to the right of the button, and faces below), `"button_count"` (displays total number of likes to the right of the button), and `"box_count"` (displays total number of likes in a callout above the button). |
-| `data-gd-facebook-action` | `"like"` | The verb to display on the button. valid options are `"like"` and `"recommend"`.
-| `data-gd-facebook-colorscheme` | `"light"` | The colour scheme for the button. Valid options are `"light"` and `"dark"`.
-| `data-gd-facebook-font` | none | Sets the font for the button. Valid options are `"arial"`, `"lucida grande"`, `"segoe ui"`, `"tahoma"`, `"trebuchet ms"` and `"verdana"` |
+| `data-gd-fb-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
+| `data-gd-fb-width` | `"450"` | The width of the button. |
+| `data-gd-fb-show-faces` | `"true"` | Whether to show avatars of friends below the share button for a logged in useri (this only shows when `data-gd-facebook-layout` is set to `"standard"`). |
+| `data-gd-fb-layout`| `"standard"` | The layout of the like button. Possible values are `"standard"` (displays test to the right of the button, and faces below), `"button_count"` (displays total number of likes to the right of the button), and `"box_count"` (displays total number of likes in a callout above the button). |
+| `data-gd-fb-action` | `"like"` | The verb to display on the button. valid options are `"like"` and `"recommend"`.
+| `data-gd-fb-colorscheme` | `"light"` | The colour scheme for the button. Valid options are `"light"` and `"dark"`.
+| `data-gd-fb-font` | none | Sets the font for the button. Valid options are `"arial"`, `"lucida grande"`, `"segoe ui"`, `"tahoma"`, `"trebuchet ms"` and `"verdana"` |
 
 **Broadcasted Events:** None
 
@@ -268,15 +268,15 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 | name | default | description |
 |------|---------|-------------|
-| `data-gd-twitter-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
-| `data-gd-twitter-via` | none | The Twitter username to attribute the tweet to. |
-| `data-gd-twitter-text` | none | Some text to prefill the tweet box with. |
-| `data-gd-twitter-related` | none | Related accounts to recommend the user to follow after tweeting. |
-| `data-gd-twitter-count` | none | The position of the total tweet count. |
-| `data-gd-twitter-lang` | none | The language to use for the tweet button. |
-| `data-gd-twitter-hashtags` | none | Comma separated hashtags to append to the tweet. |
-| `data-gd-twitter-size` | none | The size of the button. |
-| `data-gd-twitter-dnt` | none | Whether to turn on the DNT header to opt users out of content personalisation. |
+| `data-gd-tw-url` | The current page URL | The URL that will be bookmarked when the button is clicked. |
+| `data-gd-tw-via` | none | The Twitter username to attribute the tweet to. |
+| `data-gd-tw-text` | none | Some text to prefill the tweet box with. |
+| `data-gd-tw-related` | none | Related accounts to recommend the user to follow after tweeting. |
+| `data-gd-tw-count` | none | The position of the total tweet count. |
+| `data-gd-tw-lang` | none | The language to use for the tweet button. |
+| `data-gd-tw-hashtags` | none | Comma separated hashtags to append to the tweet. |
+| `data-gd-tw-size` | none | The size of the button. |
+| `data-gd-tw-dnt` | none | Whether to turn on the DNT header to opt users out of content personalisation. |
 
 **Broadcasted Events:** None
 
@@ -360,6 +360,8 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 <div data-gd-plugin="all-personal-share"></div>
 ```
 
+---
+
 ### Social Recommendations
 
 > **ID:** `social-recommendations`
@@ -367,7 +369,7 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 This plugin displays friends of the currently logged in user who are likely to be interested in one or more topics. These topics can either be explicitly defined, or can be inferred from the content surrounding the plugin.
 
-Example:
+**Example:**
 
 ```html
 <div id="client-social-recs" data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
@@ -393,7 +395,7 @@ Example:
 
 If the Global Dawn platform is unable to find enough interested friends, a fallback list is returned. The exact mechanics behind this vary depending on the social network, but in all instances we try to provide a list of close friends.
 
-**Generated HHTML:**
+**Generated HTML:**
 
 This plugin generates the HTML shown below. This is injected as a child of the plugin div. Variables are shown using {{ and }}.
 
@@ -438,11 +440,13 @@ This plugin provides the following functionality:
 - Displays a list of user reviews for a particular item or product. 
 - Allows a user to submit a review for a given item or product, using a pre-configured form template.
 
-Example:
+**Example:**
 
+```html
 <div data-gd-plugin="product-reviews" data-gd-review-template-id="50a51ba5ccf26dc73368f217" data-gd-item-id="unique_item_id" data-gd-page-size="4"></div>
+```
 
-Options:
+**Options:**
 
 | name | optional | default | description |
 |------|----------|---------|-------------|
@@ -458,67 +462,58 @@ This plugin generates the HTML shown below. This is injected as a child of the p
 
 ```html
 <div class="gd-reviews" xmlns="http://www.w3.org/1999/html">
-	<header>
-		<h3>Reviews</h3>
-		<a data-gd-reviews-add href="/plugins/reviews/add?reviewTemplateId=uniqueTemplateId&itemId=unique_item_id">+ Post a review</a>
-	</header>
-
-	<div class="gd-pagination">
-	<div class="gd-pagination-sort">
-		<a data-gd-page-sort="" href="#">Most Relevant</a>
-		|
-		<a data-gd-page-sort="" href="#">Most Helpful</a>
-		|
-		<a data-gd-page-sort="" href="#">Most Recent</a>
-	</div>
-
-	<div class="gd-pagination-current">
-		Page <span class="gd-pagination-page">1</span> of  <span class="gd-pagination-total">3</span>
-	</div>
-	<div class="gd-pagination-controls">
-		<a  class="gd-pagination-controls-next" href="#" data-gd-page="2">Next</a>
-	</div>
-</div>
-<ul>
-    <li>
-    	<figure><span/></figure>
-    	<article>
-    		<div>19, November, 2012</div>
-    		<div><strong>By: </strong>Anonymous</div>
-        <div >
-		<strong>My Rating:</strong>
-	    	<div data-gd-plugin="star-rating" data-gd-rating="0" data-gd-disabled="true" >
-			<label>
-			  <span>Bad</span>
-			</label>
-			<label>
-			  <span>Average</span>
-			</label>
-			<label>
-			  <span>Excellent</span>
-			</label>
-	    	</div>
-	</div>
-	<div data-gd-reviews-show-when="expanded">
-		<strong>My Comments:</strong>
-		<span >
-			This product is awesome
-		</span>
-	</div>
-	<div data-gd-reviews-summary-togglers>
-		<a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="collapsed">Show more</a>
-		<a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="expanded">Show less</a>
-	</div>
-    	</article>
-    </li>
- 
-    </div>
-	<div data-gd-reviews-summary-togglers>
-		<a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="collapsed">Show more</a>
-		<a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="expanded">Show less</a>
-	</div>
-    	</article>
-    </li>
-  </ul>
+   <header>
+      <h3>Reviews</h3>
+   </header>
+   <div class="gd-pagination">
+      <div class="gd-pagination-sort">
+         <a data-gd-page-sort="" href="#">Most Relevant</a>
+         |
+         <a data-gd-page-sort="" href="#">Most Helpful</a>
+         |
+         <a data-gd-page-sort="" href="#">Most Recent</a>
+      </div>
+      <div class="gd-pagination-current">
+         Page <span class="gd-pagination-page">1</span> of  <span class="gd-pagination-total">2</span>
+      </div>
+      <div class="gd-pagination-controls">
+         <a class="gd-pagination-controls-next" href="#" data-gd-page="2">Next</a>
+      </div>
+   </div>
+   <ul>
+      <li>
+         <figure>
+            <span />
+         </figure>
+         <article>
+            <time>21, November, 2012</time>
+            <div><strong>By: </strong>Anonymous</div>
+            <div data-gd-reviews-show-when="expanded">
+               <strong>Your Rating:</strong>
+               <div data-gd-plugin="star-rating" data-gd-rating="2" data-gd-disabled="true">
+                  <label>
+                  <span>Bad</span>
+                  </label>
+                  <label>
+                  <span>OK</span>
+                  </label>
+                  <label>
+                  <span>Great</span>
+                  </label>
+               </div>
+            </div>
+            <div>
+               <strong>My Thoughts:</strong>
+               <span>
+               this product is awesome
+               </span>
+            </div>
+            <div data-gd-reviews-summary-togglers>
+               <a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="collapsed">Show more</a>
+               <a href="#" data-gd-reviews-summary-toggle data-gd-reviews-show-when="expanded">Show less</a>
+            </div>
+         </article>
+      </li>
+   </ul>
 </div>
 ```

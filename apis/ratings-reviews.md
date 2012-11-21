@@ -1,12 +1,12 @@
-# The Ratings and Reviews API's (Currently unsupported)
+# The Ratings and Reviews APIs (Currently unsupported)
 
 ## Introduction
 
 Global Dawn's ratings and reviews API's are designed to provide easy integration with our customer ratings and product reviews system.
 
-## Preprequisites
+## Prequisites
 
-The utilise our ratings and reviews API's, you must ensure that you have configured your corresponding API keys in
+To utilise our ratings and reviews API's, you must ensure that you have configured your corresponding API keys in
 the admin manager.
 
 ## The Endpoints
@@ -21,7 +21,7 @@ Creates a review form template
 
 **API path**
 
-`http://host:port/clients/<client_id>/reviews/templates/`
+`http://host:port/apis/ratingsreviews/clients/<client_id>/reviews/templates/`
 
 **Payload**
 
@@ -90,7 +90,7 @@ Retrieves the list of user reviews for a partcular product.
 
 **API path**
 
-`http://host:port/clients/<client_id>/reviews/<template_id>/item/<product_id>?sortType=MOST_RECENT&count=10&offset=0`
+`http://host:port/apis/ratingsreviews/clients/<client_id>/reviews/<template_id>/item/<product_id>?sortType=MOST_RECENT&count=10&offset=0`
 
 **Payload** none
 
@@ -135,7 +135,7 @@ Creates a user review for a given product
 
 **API path**
 
-`http://host:port/clients/<client_id>/reviews/<template_id>/item/<product_id>`
+`http://host:port/apis/ratingsreviews/clients/<client_id>/reviews/<template_id>/item/<product_id>`
 
 **Payload**
 

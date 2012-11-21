@@ -1,10 +1,10 @@
 # The Social Login API's
 
-### Introduction
+## Introduction
 
 Global Dawn's social login API's are designed to allow easy integration with multiple authentication systems. We abstract away the complexity and differences between vendors and expose a clean and easy to use API.
 
-### Preprequisites
+## Preprequisites
 
 The utilise our social login API's, you must ensure that you have configured your social network API keys in
 the admin manager.

@@ -369,7 +369,7 @@ This plugin renders the Facebook Login, Twitter Login, and User Status plugins u
 
 This plugin displays friends of the currently logged in user who are likely to be interested in one or more topics. These topics can either be explicitly defined, or can be inferred from the content surrounding the plugin.
 
-Example:
+**Example:**
 
 ```html
 <div id="client-social-recs" data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
@@ -395,7 +395,7 @@ Example:
 
 If the Global Dawn platform is unable to find enough interested friends, a fallback list is returned. The exact mechanics behind this vary depending on the social network, but in all instances we try to provide a list of close friends.
 
-**Generated HHTML:**
+**Generated HTML:**
 
 This plugin generates the HTML shown below. This is injected as a child of the plugin div. Variables are shown using {{ and }}.
 

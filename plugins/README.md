@@ -443,14 +443,14 @@ This plugin provides the following functionality:
 **Example:**
 
 ```html
-<div data-gd-plugin="product-reviews" data-gd-review-template-id="50a51ba5ccf26dc73368f217" data-gd-item-id="unique_item_id" data-gd-page-size="4"></div>
+<div data-gd-plugin="product-reviews" data-gd-review-template-name="unique_template_name" data-gd-item-id="unique_item_id" data-gd-page-size="4"></div>
 ```
 
 **Options:**
 
 | name | optional | default | description |
 |------|----------|---------|-------------|
-| `data-gd-review-template-id` | no | none | The ID for the review template that should be used to build the review form |
+| `data-gd-review-template-name` | no | none | The unique name of the template to use for the user review forms |
 | `data-gd-item-id` | no | none | The unique identifier for the product or item to review |
 | `data-gd-page-size` | no | 10 | The number of reviews to include in each page |
 

@@ -10,13 +10,13 @@ Global Dawn supports a number of event types for which no prerequisite work is r
 
 ## Shared API conventions 
 
-> :information_source: &nbsp;**Note:** these API's require a POST request and [secret key signing](https://github.com/globaldawn/docs/blob/master/apis/secret_key_signing.md).
+> :information_source: &nbsp;<strong>Note:</strong> these API's require a POST request and [secret key signing](https://github.com/globaldawn/docs/blob/master/apis/secret_key_signing.md).
 
 ### Pre-Configured Action Types
 
 #### BUY
 
-API Path: /apis/behaviour/actions/BUY
+API Path: `/apis/behaviour/actions/BUY`
 
 Parameters:
 
@@ -29,9 +29,9 @@ Parameters:
 
 ### Custom Action Types
 
-> :information_source: &nbsp;**Note:** this api path can only be used with values you have configured in the admin manager. The full api path for each action is displayed in the admin manager.
+> :information_source: &nbsp;<strong>Note:</strong> this api path can only be used with values you have configured in the admin manager. The full api path for each action is displayed in the admin manager.
 
-API Path: /apis/behaviour/actions/[your_action]
+API Path: `/apis/behaviour/actions/[your_action]`
 
 Parameters:
 

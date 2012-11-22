@@ -10,7 +10,7 @@ Global Dawn supports a number of event types for which no prerequisite work is r
 
 ## Shared API conventions 
 
-> :information_source: &nbsp;**Note:** these API's require a POST request and (https://github.com/globaldawn/docs/blob/master/apis/secret_key_signing.md)[secret key signing].
+> :information_source: &nbsp;**Note:** these API's require a POST request and [secret key signing](https://github.com/globaldawn/docs/blob/master/apis/secret_key_signing.md).
 
 ### Pre-Configured Action Types
 

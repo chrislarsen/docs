@@ -487,7 +487,7 @@ This plugin generates the HTML shown below. This is injected as a child of the p
          </figure>
          <article>
             <time>21, November, 2012</time>
-            <div><strong>By: </strong>Anonymous</div>
+            <div><strong>By: </strong>John Smith</div>
             <div data-gd-reviews-show-when="expanded">
                <strong>Your Rating:</strong>
                <div data-gd-plugin="star-rating" data-gd-rating="2" data-gd-disabled="true">

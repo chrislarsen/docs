@@ -6,8 +6,7 @@ Global Dawn's ratings and reviews API's are designed to provide easy integration
 
 ## Prequisites
 
-To utilise our ratings and reviews API's, you must ensure that you have configured your corresponding API keys in
-the admin manager.
+To utilise our ratings and reviews API's, you must ensure that you have configured your corresponding API keys in the admin manager.
 
 ## The Endpoints
 
@@ -17,7 +16,7 @@ The following endpoints are supported by the ratings and review API:
 
 **Description**
 
-Creates a review form template
+Creates a review form template which can be used to create user review forms
 
 **API path**
 
@@ -86,7 +85,7 @@ Creates a review form template
 
 **Description**
 
-Retrieves the list of user reviews for a partcular product.
+Retrieves the list of user reviews for a particular product.
 
 **API path**
 

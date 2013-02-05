@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <title>Example API Client</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta property="og:title" content="Example API Client" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost.1-9-90.net:1337/" />
+    <meta property="og:image" content="http://profile.ak.fbcdn.net/hprofile-ak-prn1/23284_129604823720469_8142_n.jpg" />
+    <meta property="og:description" content="This is a sample OpenGraph description." />
+
+    <script type="text/javascript" src="//use.typekit.net/lhk5ekg.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <link rel="stylesheet" href="http://localhost.1-9-90.net:1339/css/demo.css" />
+    <script src="/start-sdk.js"></script>
+    <script src="http://localhost.1-9-90.net:1339/js/gd-sdk-bootstrap.js"></script>
+  </head>
+  <body>
+    <!-- And now for the test plugin declarations... -->
+    <h1>Example API Client</h1>
+
+    <!-- The message area will show messages from other plugins. -->
+    <div data-gd-plugin="message-area"></div>
+
+    <h2>Social Login</h2>
+    <p>
+      Social network based logins. All networks have two variations: a popup
+      based one, and a non-popup based one (which uses a redirect).
+    </p>
+
+    <h3>Facebook login with popup</h3>
+    <div data-gd-plugin="facebook-login"></div>
+    <div class="gd-login-small" data-gd-plugin="facebook-login"></div>
+
+    <h3>Facebook login without popup</h3>
+    <div data-gd-plugin="facebook-login"
+      data-gd-popup="false"
+      data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+      data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
+    <div class="gd-login-small" data-gd-plugin="facebook-login"
+      data-gd-popup="false"
+      data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+      data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
+
+    <h3>Twitter login with popup</h3>
+    <div data-gd-plugin="twitter-login"></div>
+    <div class="gd-login-small" data-gd-plugin="twitter-login"></div>
+
+    <h3>Twitter login without popup</h3>
+    <div data-gd-plugin="twitter-login"
+      data-gd-popup="false"
+      data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+      data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
+    <div class="gd-login-small" data-gd-plugin="twitter-login"
+      data-gd-popup="false"
+      data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+      data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
+
+    <h3>Google login with popup</h3>
+    <div data-gd-plugin="google-login"></div>
+    <div class="gd-login-small" data-gd-plugin="google-login"></div>
+
+    <h3>Google login without popup</h3>
+    <div data-gd-plugin="google-login"
+      data-gd-popup="false"
+      data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+      data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
+    <div class="gd-login-small" data-gd-plugin="google-login"
+      data-gd-popup="false"
+      data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+      data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
+
+    <h3>All Login with popup</h3>
+    <div data-gd-plugin="all-login"></div>
+    <div class="gd-login-small" data-gd-plugin="all-login"></div>
+
+    <h3>All Login without popup</h3>
+    <div data-gd-plugin="all-login"
+       data-gd-popup="false"
+       data-gd-redirect="http://localhost.1-9-90.net:1337/somewhere/else"></div>
+    <div class="gd-login-small" data-gd-plugin="all-login"
+       data-gd-popup="false"
+       data-gd-redirect="http://localhost.1-9-90.net:1337/somewhere/else"></div>
+
+    <h2>Social Login Status</h2>
+    <p>
+      Social network login status. This widget is used for showing the status
+      of a user (ie. logged in or logged out).
+    </p>
+
+    <h3>User status</h3>
+    <div data-gd-plugin="user-status"></div>
+
+    <h2>Social Public Sharing</h2>
+    <p>
+      This set of plugins is used for doing things like Facebook likes,
+      and Twitter tweet based sharing.
+    </p>
+
+    <h3>Facebook Public Share</h3>
+    <div data-gd-plugin="facebook-public-share"></div>
+
+    <h3>Twitter Public Share</h3>
+    <div data-gd-plugin="twitter-public-share"></div>
+
+    <h3>All Public Share</h3>
+    <div data-gd-plugin="all-public-share"></div>
+
+    <h2>Social Sharing</h2>
+    <p>
+      This set of plugins is used for doing things Facebook share and Twitter
+      web intent based sharing.
+    </p>
+
+    <h3>Facebook Personal Share</h3>
+    <div data-gd-plugin="facebook-personal-share"></div>
+
+    <h3>Facebook personal share with custom message</h3>
+    <div data-gd-plugin="facebook-personal-share"
+      data-gd-description="Custom personal share message"></div>
+
+    <h3>Twitter personal share</h3>
+    <div data-gd-plugin="twitter-personal-share"></div>
+
+    <h3>Twitter personal share with custom message</h3>
+    <div data-gd-plugin="twitter-personal-share"
+      data-gd-description="Custom personal share message"></div>
+
+    <h3>All personal share</h3>
+    <div data-gd-plugin="all-personal-share"></div>
+
+    <h3>All personal share with custom message</h3>
+    <div data-gd-plugin="all-personal-share"
+      data-gd-description="Custom personal share message"></div>
+
+    <h2>Social Recommendations</h2>
+
+    <h3>Declarative metadata, RHCP, send</h3>
+    <div data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum,rhcp,red hot chili peppers" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
+
+    <h3>Declarative metadata, RHCP, send (with button styles)</h3>
+    <div class="gd-social-recommendations-buttons" data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum,rhcp,red hot chili peppers" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
+
+    <h3>Declarative metadata, wall post</h3>
+    <div data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum,rhcp,red hot chili peppers" data-gd-message="OMG cool!" data-gd-facebook-action="wall" data-gd-min-results="10" data-gd-enable-multiselect="true" data-gd-action-label="post to wall"></div>
+  </body>
+</html>

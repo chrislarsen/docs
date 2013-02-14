@@ -10,8 +10,8 @@
     <meta property="og:image" content="http://profile.ak.fbcdn.net/hprofile-ak-prn1/23284_129604823720469_8142_n.jpg" />
     <meta property="og:description" content="This is a sample OpenGraph description." />
 
-    <script type="text/javascript" src="//use.typekit.net/lhk5ekg.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="//use.typekit.net/lhk5ekg.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 
     <link rel="stylesheet" href="http://localhost.1-9-90.net:1339/css/demo.css" />
     <script src="/start-sdk.js"></script>
@@ -72,17 +72,33 @@
       data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
       data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
 
+    <h3>LinkedIn login with popup</h3>
+    <div data-gd-plugin="linked-in-login"></div>
+    <div class="gd-login-small" data-gd-plugin="linked-in-login"></div>
+
+    <h3>LinkedIn login without popup</h3>
+    <div data-gd-plugin="linked-in-login"
+      data-gd-popup="false"
+      data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+      data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
+    <div class="gd-login-small" data-gd-plugin="linked-in-login"
+      data-gd-popup="false"
+      data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+      data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
+
     <h3>All Login with popup</h3>
     <div data-gd-plugin="all-login"></div>
     <div class="gd-login-small" data-gd-plugin="all-login"></div>
 
     <h3>All Login without popup</h3>
     <div data-gd-plugin="all-login"
-       data-gd-popup="false"
-       data-gd-redirect="http://localhost.1-9-90.net:1337/somewhere/else"></div>
+         data-gd-popup="false"
+         data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+         data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
     <div class="gd-login-small" data-gd-plugin="all-login"
-       data-gd-popup="false"
-       data-gd-redirect="http://localhost.1-9-90.net:1337/somewhere/else"></div>
+         data-gd-popup="false"
+         data-gd-success-redirect="http://localhost.1-9-90.net:1337/login-done.html"
+         data-gd-failure-redirect="http://localhost.1-9-90.net:1337/login-failed.html"></div>
 
     <h2>Social Login Status</h2>
     <p>
@@ -102,6 +118,9 @@
     <h3>Facebook Public Share</h3>
     <div data-gd-plugin="facebook-public-share"></div>
 
+    <h3>LinkedIn Public Share</h3>
+    <div data-gd-plugin="linked-in-public-share" data-gd-li-text="Custom public share message"></div>
+
     <h3>Twitter Public Share</h3>
     <div data-gd-plugin="twitter-public-share"></div>
 
@@ -119,31 +138,37 @@
 
     <h3>Facebook personal share with custom message</h3>
     <div data-gd-plugin="facebook-personal-share"
-      data-gd-description="Custom personal share message"></div>
+      data-gd-fb-text="Custom personal share message"></div>
+
+    <h3>LinkedIn Personal Share</h3>
+    <div data-gd-plugin="linked-in-personal-share"></div>
+
+    <h3>LinkedIn personal share with custom message</h3>
+    <div data-gd-plugin="linked-in-personal-share" data-gd-li-text="Custom personal share message"></div>
 
     <h3>Twitter personal share</h3>
     <div data-gd-plugin="twitter-personal-share"></div>
 
     <h3>Twitter personal share with custom message</h3>
     <div data-gd-plugin="twitter-personal-share"
-      data-gd-description="Custom personal share message"></div>
+      data-gd-tw-text="Custom personal share message"></div>
 
     <h3>All personal share</h3>
     <div data-gd-plugin="all-personal-share"></div>
 
     <h3>All personal share with custom message</h3>
     <div data-gd-plugin="all-personal-share"
-      data-gd-description="Custom personal share message"></div>
+      data-gd-text="Custom personal share message"></div>
 
     <h2>Social Recommendations</h2>
 
     <h3>Declarative metadata, RHCP, send</h3>
-    <div data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum,rhcp,red hot chili peppers" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
+    <div data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,red hot chili peppers,metallica" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
 
     <h3>Declarative metadata, RHCP, send (with button styles)</h3>
-    <div class="gd-social-recommendations-buttons" data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum,rhcp,red hot chili peppers" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
+    <div class="gd-social-recommendations-buttons" data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,red hot chili peppers,metallica" data-gd-url="http://www.globaldawn.com" data-gd-message="Please share!"></div>
 
     <h3>Declarative metadata, wall post</h3>
-    <div data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,museum,rhcp,red hot chili peppers" data-gd-message="OMG cool!" data-gd-facebook-action="wall" data-gd-min-results="10" data-gd-enable-multiselect="true" data-gd-action-label="post to wall"></div>
+    <div data-gd-plugin="social-recommendations" data-gd-title="Interested friends" data-gd-topics="rock music,red hot chili peppers,metallica" data-gd-message="OMG cool!" data-gd-facebook-action="wall" data-gd-min-results="10" data-gd-enable-multiselect="true" data-gd-action-label="post to wall"></div>
   </body>
 </html>

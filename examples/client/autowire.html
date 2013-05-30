@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <title>Example API Client</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta property="og:title" content="Intent HQ Plugin Builder" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost.gd:1337/" />
+    <meta property="og:description" content="This is a sample OpenGraph description." />
+    <meta property="og:image" content="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ_E0NbkJTe3UaCR6y_zREoHlPu3-JeVDDiB9QCdG47qNV_jvP7" />
+
+    <link rel="stylesheet" href="http://cdn.localhost.gd:1337/css/demo.css" />
+
+    <script src="//use.typekit.net/lhk5ekg.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+
+    <h1>Example API Client</h1>
+
+    <h2>Autowire plugins</h2>
+
+    <script>
+      window.gdLoaded = function(gd) {
+        gd.init({
+          autowire: [
+            { // already exists in DOM
+              selector: '#twitterLogin',
+              plugin: 'twitter-login',
+              options: {
+                small: 'true'
+              }
+            },
+            { // doesnt exist - first empty
+              selector: '#testFirst',
+              plugin: 'user-status',
+              position: 'first'
+            },
+            { // doesnt exist - first
+              selector: 'body',
+              plugin: 'user-status',
+              position: 'first'
+            },
+            { // doesnt exist - last
+              selector: 'body',
+              plugin: 'facebook-login',
+              options: {
+                small: 'true'
+              },
+              position: 'append'
+            },
+            { // doesnt exist - before
+              selector: '#testInjection span',
+              plugin: 'google-login',
+              options: {
+                small: 'true'
+              },
+              position: 'before'
+            },
+            { // doesnt exist - after
+              selector: '#testInjection span',
+              plugin: 'linkedin-login',
+              options: {
+                small: 'true'
+              },
+              position: 'after'
+            }
+          ]
+        }).done();
+      }
+    </script>
+
+
+    <script src="http://cdn.localhost.gd:1337/sdk/requirejs.dev.conf.js"></script>
+    <script>
+      require.baseUrl = "http://1111111111.localhost.gd:1337/";
+      require.deps = [
+        "gd-sdk/gd-sdk"
+      ];
+    </script>
+    <script src="http://1111111111.localhost.gd:1337/node_modules/requirejs/require.js"></script>
+
+    <div id="testInjection"><span> | </span></div>
+    <div id="twitterLogin" data-gd-plugin="twitter-login" data-gd-small="false"></div>
+    <div id="testFirst"></div>
+    <div data-gd-plugin="all-login"></div>
+  </body>
+</html>

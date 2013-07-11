@@ -27,59 +27,55 @@
 
     <script type="text/javascript">
       (function(apiKey, config) {
-        var s, d = document, apiKey = apiKey, id = 'ihqSDK', js = document.createElement('script');
-        if (d.getElementById(id)) return;
-        if (typeof window.gdLoaded !== 'function') {
-          window.gdLoaded = function(gd) { gd.init(config || {}).done(); }
-        }
-        js.type = 'text/javascript'; js.async = true; js.id = id;
-        js.src = 'https://' + apiKey + '.intenthq.com/sdk/ihq-sdk.js';
-        s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(js, s);
-      }('1111111111', {
-        autowire: [
-          { // already exists in DOM
-            selector: '#twitterLogin',
-            plugin: 'twitter-login',
-            options: {
-              small: 'true'
+        var s,d=document,apiKey=apiKey,id='ihqSDK',js=document.createElement('script');if(d.getElementById(id))return;if(typeof window.gdLoaded!=='function'){window.gdLoaded=function(a){a.init(config||{}).done()}}js.type='text/javascript';js.async=true;js.id=id;js.src='https://'+apiKey+'.intenthq.com/sdk/gd-sdk.js';s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(js,s);
+      }(
+        '1111111111',
+        {
+          autowire: [
+            { // already exists in DOM
+              selector: '#twitterLogin',
+              plugin: 'twitter-login',
+              options: {
+                small: 'true'
+              }
+            },
+            { // doesnt exist - first empty
+              selector: '#testFirst',
+              plugin: 'user-status',
+              position: 'first'
+            },
+            { // doesnt exist - first
+              selector: 'body',
+              plugin: 'user-status',
+              position: 'first'
+            },
+            { // doesnt exist - last
+              selector: 'body',
+              plugin: 'facebook-login',
+              options: {
+                small: 'true'
+              },
+              position: 'append'
+            },
+            { // doesnt exist - before
+              selector: '#testInjection span',
+              plugin: 'google-login',
+              options: {
+                small: 'true'
+              },
+              position: 'before'
+            },
+            { // doesnt exist - after
+              selector: '#testInjection span',
+              plugin: 'linkedin-login',
+              options: {
+                small: 'true'
+              },
+              position: 'after'
             }
-          },
-          { // doesnt exist - first empty
-            selector: '#testFirst',
-            plugin: 'user-status',
-            position: 'first'
-          },
-          { // doesnt exist - first
-            selector: 'body',
-            plugin: 'user-status',
-            position: 'first'
-          },
-          { // doesnt exist - last
-            selector: 'body',
-            plugin: 'facebook-login',
-            options: {
-              small: 'true'
-            },
-            position: 'append'
-          },
-          { // doesnt exist - before
-            selector: '#testInjection span',
-            plugin: 'google-login',
-            options: {
-              small: 'true'
-            },
-            position: 'before'
-          },
-          { // doesnt exist - after
-            selector: '#testInjection span',
-            plugin: 'linkedin-login',
-            options: {
-              small: 'true'
-            },
-            position: 'after'
-          }
-        ]
-      }));
+          ]
+        }
+      ));
     </script>
 
     <div id="testInjection"><span> | </span></div>

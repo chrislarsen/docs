@@ -1,0 +1,39 @@
+project.ext.scriptRootDir = "git rev-parse --show-toplevel".execute().text.trim() + "/build-scripts/js/${gradle.gradleVersion}"
+project.ext.commonScriptRootDir = "git rev-parse --show-toplevel".execute().text.trim() + "/build-scripts/common/${gradle.gradleVersion}"
+
+apply from:"${project.ext.commonScriptRootDir}/common-variables.gradle"
+apply from:"${project.ext.commonScriptRootDir}/common-upload-legacy-configuration.gradle"
+apply from:"${project.ext.commonScriptRootDir}/common-deploy.gradle"
+
+def versionFile = new File('version.properties')
+def config = new ConfigSlurper().parse(versionFile.toURL());
+def buildDir = new File(project.projectDir, 'build')
+
+version = "${config.versionNumber}.${project.ext.buildNumber}"
+group = "com.globaldawn.api-example-client.${project.ext.branchName}"
+
+task tar(dependsOn: 'buildHtml', type: Tar) {
+  compression = 'BZIP2'
+  extension = 'tar.bz2'
+
+  from('build')
+}
+
+artifacts {
+  archives tar
+}
+
+task cleanHtml() << {
+  "rm -rf $buildDir".execute()
+}
+
+task buildHtml(dependsOn: 'cleanHtml', type: Copy) {
+  from 'client'
+  into buildDir
+  include('*.built.html')
+  include('login-*.html')
+  include('ping')
+  rename {
+    it.replace('.built', '')
+  }
+}
